@@ -31,6 +31,9 @@ button:disabled{color:#808080}
 .hud .big{font-size:40px;font-weight:700;line-height:1;color:#000;display:inline-block}
 .hud .big.bump{animation:bump .12s steps(2)}@keyframes bump{50%{transform:scale(1.08)}}
 .hud .rate{font-size:15px;color:#106010;min-height:18px}
+.hud .hud-free{font-size:14px;color:#000}
+.hud .hud-next{font-size:14px;color:#555}.hud .hud-next.ready{color:#106010;font-weight:700}
+#pk-free{font-size:12px;color:#dde;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dlbtn{display:block;width:100%;margin:8px 0 4px;min-height:58px;font-size:22px!important;font-weight:700;color:#fff!important;background:#d02020!important;text-shadow:2px 2px 0 #600!important;letter-spacing:1px;cursor:pointer;touch-action:manipulation}
 .dlbtn .stars{color:#ff0;animation:blink .6s steps(1) infinite}
 .dlbtn:active{transform:translateY(2px)}
