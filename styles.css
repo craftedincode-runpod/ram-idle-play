@@ -96,6 +96,9 @@ body.era1 .popup .window-body,body .popup .window-body{background:#ffff40;margin
 .trap{min-height:34px;font-size:17px!important;font-weight:700;background:#40d040!important;width:100%;animation:wob .5s steps(2) infinite}
 @keyframes wob{50%{transform:rotate(-2deg)}}
 .pop-mem{font-size:12px;color:#7040c0}
+.popup{transition:opacity .3s linear}
+.pop-timer{width:100%;height:4px;background:rgba(0,0,0,.15)}.pop-timer i{display:block;height:100%;width:100%;background:#d02020}
+.popup.lucky .pop-timer i{background:#c89a10}
 .popup.lucky .title-bar{background:linear-gradient(90deg,#c89a10,#f8e040)!important}.popup.lucky .title-bar-text{color:#000}
 body.era1 .popup.lucky .window-body,body .popup.lucky .window-body{background:#fff6c0}.popup.lucky{box-shadow:0 0 0 3px #f8e040,0 0 18px 6px #f8e040!important}
 /* fx */
