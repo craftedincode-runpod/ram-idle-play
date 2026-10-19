@@ -44,7 +44,13 @@ body.pocket .offers{min-height:0}
 .offers button:disabled i{color:#888}
 .goal{margin-top:6px;font-size:14px;color:#000080}
 .status-bar{display:flex;gap:2px;margin-top:3px}.status-bar-field{font-size:13px;padding:1px 4px}.status-bar-field.grow{flex:1}
-.bad{color:#d02020;font-weight:700;animation:blink .5s steps(1) infinite}
+.full{color:#806000;font-weight:700}
+.membar.inswap .seg.prog{background-image:repeating-linear-gradient(90deg,transparent 0 6px,rgba(255,255,255,.35) 6px 8px)}
+/* v0.3: things that don't fit in RAM are greyed out (never punished) */
+button.nofit:disabled{opacity:.6}
+.desk-icon.nofit img,#gomenu li.nofit img{opacity:.4;filter:grayscale(1)}
+.desk-icon.nofit span,#gomenu li.nofit{color:#808080}
+.window.insufficient .title-bar{filter:hue-rotate(160deg)}
 /* memory bar */
 .membar{position:relative;height:14px;background:#fff;box-shadow:inset 1px 1px #808080;overflow:hidden;min-width:120px}
 .membar.big{height:20px;margin:6px 0}
@@ -56,7 +62,6 @@ body.pocket .offers{min-height:0}
 .membar .swapcap{position:absolute;top:0;bottom:0;width:2px;background:#c89a10;margin-left:-1px}
 .membar .mtext{position:absolute;left:4px;top:0;font-size:12px;line-height:14px;color:#000;text-shadow:1px 0 #fff,-1px 0 #fff,0 1px #fff,0 -1px #fff;white-space:nowrap}
 .membar.big .mtext{line-height:20px;font-size:13px}
-.membar.over{box-shadow:inset 0 0 0 2px #d02020}
 /* program windows */
 .prog{display:flex;flex-direction:column;gap:4px}
 .ph{display:flex;gap:8px;align-items:center}.ph b{font-size:16px}.cnt{color:#000080;font-weight:700}.desc{font-size:13px;color:#444}
@@ -64,7 +69,6 @@ body.pocket .offers{min-height:0}
 .pbar{position:relative;height:16px;background:#fff;box-shadow:inset 1px 1px #808080}.pbar .fill{height:100%;width:0;background:#108010}
 .pbar .fname{position:absolute;left:4px;top:0;font-size:12px;line-height:16px;color:#fff;mix-blend-mode:difference}
 .pbtns{display:flex;gap:3px}.pbtns button{min-width:0;padding:0 6px}.pbtns .b1{flex:1}
-button.warn{color:#b00000!important;outline:1px dashed #d02020;outline-offset:-4px}
 .tier{background:#ffffc0!important;font-size:13px!important}
 .extra{font-size:12px;color:#7040c0}
 /* task manager */
@@ -108,17 +112,10 @@ body.era1 .popup.lucky .window-body,body .popup.lucky .window-body{background:#f
 .particle{position:fixed;pointer-events:none;z-index:99998;transition:transform .4s steps(6),opacity .4s;margin:-8px 0 0 -8px}
 #toasts{position:fixed;right:8px;top:8px;display:flex;flex-direction:column;gap:4px;z-index:99990;pointer-events:none}
 .toast{background:#ffffe0;border:1px solid #000;padding:3px 8px;font-size:14px;box-shadow:2px 2px 0 rgba(0,0,0,.4)}
-/* lag */
-body.thrash .window:not(.popup){animation:jit .25s steps(2) infinite}
-@keyframes jit{0%{transform:translate(0,0)}50%{transform:translate(1px,-1px)}}
-body.thrash #desk{filter:contrast(1.1) saturate(.6)}
 /* overlay */
 #overlay{display:none;position:fixed;inset:0;z-index:100000}
 #overlay.on{display:flex;align-items:center;justify-content:center}
 #overlay.black,#overlay.dos{background:#000;color:#c0c0c0}
-#overlay.blue{background:#0000a8;color:#fff;cursor:pointer}
-.crash{max-width:520px;padding:20px;text-align:center}.crash-t{display:inline-block;background:#c0c0c0;color:#0000a8;padding:0 8px;font-weight:700;margin-bottom:12px}
-.crash pre{font-family:PixelOp,monospace;font-size:18px;white-space:pre-wrap;text-align:left}
 .bios{font-family:PixelOp,monospace;font-size:18px;color:#c0c0c0;position:absolute;left:20px;top:20px;margin:0}
 .press{text-align:center;font-size:22px;display:flex;flex-direction:column;gap:12px;cursor:pointer;padding:20px}
 .fmt-ov{width:min(400px,80vw);font-size:20px}
