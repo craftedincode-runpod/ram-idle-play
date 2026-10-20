@@ -263,3 +263,7 @@ body.pocket #mb-pocket .mtext{display:none}
 .dev-info #perk-buy{margin-top:auto;min-height:30px;font-weight:700}
 #perk-why{color:#801010}
 body.pocket .dev-split{flex-direction:column}body.pocket .dev-tree{max-height:46vh}
+
+/* v0.5.1 slot caps */
+.cnt.capfull{color:#808080}
+.cnt.capfull::after{content:' full';font-size:.8em}
