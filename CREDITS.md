@@ -9,6 +9,7 @@
 | "Modern readable" font (Settings) | Atkinson Hyperlegible by the Braille Institute of America (via google/fonts) | SIL OFL 1.1 (vendor/fonts/AtkinsonHyperlegible-OFL.txt) |
 | CRT filter | Original CSS gradients (no images, no shaders) | - |
 | Settings icon | Original 16x16 grid in src/ui/icons.ts | - |
+| Device Mangler / SIMM / CPU / modem / OS-box icons (v0.5) | Original 16x16 grids in src/ui/icons.ts | - |
 | Era 1 skin, layouts, pop-ups, Pocket layout | Original CSS, this project | Project |
 | Icons (all) | Original 16x16 pixel art written as character grids in src/ui/icons.ts | Project |
 | Sounds and jingles (all) | Synthesized at runtime with WebAudio oscillators and noise in src/ui/audio.ts. No samples | Project |
