@@ -371,3 +371,33 @@ body.era2.tb-left #gomenu{left:170px;top:0;bottom:auto}body.era2.tb-right #gomen
 .wiz95 .wiz-main{flex:1;min-width:0}.wiz95 h3{margin:4px 0 8px;font-size:1.1em}.wiz95 p{margin:0 0 8px}
 .wiz-lic{background:#fff;box-shadow:inset 1px 1px #808080,inset -1px -1px #dfdfdf;padding:4px 6px;max-height:120px;overflow:auto}
 .wizard .wiz-btns{border-top:1px solid #808080;padding-top:6px}
+/* v0.7 HomeSteadz: a period personal homepage, all CSS */
+.hs-url{font-family:monospace;background:#fff;box-shadow:inset 1px 1px #808080;padding:2px 4px;margin-bottom:4px;font-size:.85em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hs-page{position:relative;padding:10px;text-align:center;color:#ff0;font-family:'Comic Sans MS','Comic Neue',cursive,sans-serif;min-height:170px;
+  background-color:#000040;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#9cf 1px,transparent 1.5px);background-size:22px 22px,37px 37px;background-position:0 0,11px 17px;box-shadow:inset 1px 1px #808080}
+.hs-page.tacky{background-color:#300040}
+.hs-h1{margin:0 0 6px;font-size:1.35em;color:#0ff;text-shadow:2px 2px #f0f}
+.hs-page.tacky .hs-h1{animation:hsblink 1s steps(1) infinite}
+.hs-marquee{overflow:hidden;white-space:nowrap;background:#000;color:#0f0;border:1px solid #0f0;margin:4px 0}
+.hs-marquee span{display:inline-block;padding-left:100%;animation:hsmarq 12s linear infinite}
+.hs-uc{margin:6px auto;width:max-content;max-width:100%;padding:3px;background:repeating-linear-gradient(45deg,#000 0 8px,#fc0 8px 16px)}
+.hs-uc span{display:block;background:#fc0;color:#000;font-weight:700;padding:2px 10px;font-family:inherit}
+.hs-row{display:flex;justify-content:center;align-items:center;gap:12px;margin:4px 0}
+.hs-gif{display:inline-block;animation:hsspin 1.6s steps(8) infinite}
+.hs-guest{color:#f6f;text-decoration:underline;font-weight:700}
+.hs-flames{height:12px;margin:6px 0;background:repeating-linear-gradient(90deg,#f30 0 6px,#fc0 6px 9px,#f60 9px 14px);animation:hsflame .4s steps(2) infinite;clip-path:polygon(0 100%,5% 20%,10% 100%,15% 0,20% 100%,25% 30%,30% 100%,35% 10%,40% 100%,45% 25%,50% 100%,55% 0,60% 100%,65% 30%,70% 100%,75% 5%,80% 100%,85% 25%,90% 100%,95% 10%,100% 100%)}
+.hs-midi{display:inline-block;background:#c0c0c0;color:#000;font-family:inherit;font-size:.85em;padding:1px 6px;box-shadow:inset -1px -1px #000,inset 1px 1px #fff;margin:3px 0}
+.hs-badge{margin:4px auto;width:max-content;max-width:100%;border:2px outset #ccc;background:#008;color:#fff;font-size:.8em;padding:2px 6px}
+.hs-ring{margin:4px 0;font-size:.85em}.hs-ring a{color:#0ff;text-decoration:underline}.hs-ring b{color:#fff}
+.hs-counter{margin-top:6px;color:#fff;font-size:.9em}
+.odo{display:inline-flex;gap:1px;vertical-align:middle}.odo i{font-style:normal;font-family:monospace;background:#000;color:#fff;padding:0 3px;border:1px solid #666}
+.hs-page[data-counter="1"] .odo i{background:linear-gradient(#333,#000 50%,#222);color:#fc0}
+.hs-page[data-counter="2"] .odo i{background:#100;color:#f22;text-shadow:0 0 4px #f00}
+.hs-page[data-counter="3"] .odo i{background:#010;color:#3f3;text-shadow:0 0 5px #0f0;animation:hsblink 1.2s steps(1) infinite}
+.hs-shop{margin-top:6px}.hs-vis{font-weight:700;margin-bottom:4px}
+.hs-btns{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px}
+.hs-btns button{display:grid;grid-template-columns:1fr auto;text-align:left;padding:3px 6px}
+.hs-btns button .sp{font-weight:700;padding-left:6px}.hs-btns button .sx{grid-column:1/3;font-style:normal;font-size:.85em;color:#205020}
+.hs-btns button:disabled{color:#3a3a3a;text-shadow:none}.hs-btns button:disabled .sx{color:#444}.hs-btns button.owned .sp{color:#106010}
+@keyframes hsmarq{to{transform:translateX(-100%)}}@keyframes hsspin{to{transform:rotate(360deg)}}@keyframes hsflame{50%{filter:hue-rotate(25deg) brightness(1.2)}}@keyframes hsblink{50%{opacity:.35}}
+body.calm .hs-page *{animation:none!important}body.calm .hs-marquee span{padding-left:0}
