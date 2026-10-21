@@ -325,3 +325,20 @@ body.pocket .window:not(.popup):not(.dialog){height:100%!important}
 .mobo-buy button .sp{text-align:right;font-weight:bold}.mobo-buy button .sx{grid-column:1/3;font-style:normal;font-size:.9em;color:#205020}
 .mobo-buy button.replace .sx{color:#7a3d00}.mobo-buy button:disabled{color:#3a3a3a;text-shadow:none}.mobo-buy button.nobetter{background:#d4d4d4;border-style:dashed}.mobo-buy button.nobetter b{color:#555}.mobo-buy button.nobetter .sx{color:#444}
 .mobo-buy button:disabled .sx{color:#444}.mobo-note{margin-top:4px;font-size:.9em;color:#555}
+/* v0.6.3: resized windows: inner content fills the window (to the bottom and right edges) and scrolls only when genuinely too small */
+.window.sized>.window-body{display:flex;flex-direction:column}
+.window.sized>.window-body>*{flex-shrink:0}
+.window.sized .devmgr{flex:1 1 auto;display:flex;flex-direction:column;min-height:0}
+.window.sized .dev-split{flex:1 1 auto;min-height:120px}
+.window.sized .dev-tree{max-height:none!important;min-height:0}
+.window.sized .tm-table{max-height:none;flex:1 1 auto;min-height:80px;overflow:auto}
+.window.sized .notepad{max-height:none;flex:1 1 auto;min-height:0}
+body.era1 .window.sized .pile{max-height:none;flex:1 1 auto}
+.window.sized .mobo-buy{flex:1 1 auto}
+#w-taskmgr.sized>.window-body>div:has(> .tm-table),#w-taskmgr.sized>.window-body>.tm-table{flex:1 1 auto}
+/* mobile: Device Mangler fills the screen; the tree takes the free space, details below */
+body.pocket .devmgr{display:flex;flex-direction:column;flex:1;min-height:0;height:100%}
+body.pocket .dev-split{flex:1;min-height:0}
+body.pocket .dev-tree{max-height:none!important;flex:1 1 auto;min-height:0}
+body.pocket .window:not(.popup):not(.dialog) .window-body:has(> .devmgr){display:flex;flex-direction:column}
+.window.measure .dev-tree{max-height:none!important}
