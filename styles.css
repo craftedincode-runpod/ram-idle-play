@@ -401,3 +401,11 @@ body.era2.tb-left #gomenu{left:170px;top:0;bottom:auto}body.era2.tb-right #gomen
 .hs-btns button:disabled{color:#3a3a3a;text-shadow:none}.hs-btns button:disabled .sx{color:#444}.hs-btns button.owned .sp{color:#106010}
 @keyframes hsmarq{to{transform:translateX(-100%)}}@keyframes hsspin{to{transform:rotate(360deg)}}@keyframes hsflame{50%{filter:hue-rotate(25deg) brightness(1.2)}}@keyframes hsblink{50%{opacity:.35}}
 body.calm .hs-page *{animation:none!important}body.calm .hs-marquee span{padding-left:0}
+/* v0.7 spare-parts sticks (Upgrade PC): vertical green DIMMs, unlike MotherBored's horizontal slots */
+.spare{margin:4px 0}.spare-n{font-weight:700;font-size:1.15em;margin-bottom:3px}
+.spare-row{display:flex;flex-wrap:wrap;gap:3px;align-items:flex-end;min-height:40px;margin-bottom:3px}
+.spare-stick{position:relative;display:block;width:12px;height:36px;background:#2a2a2a;box-shadow:inset 1px 1px #000,inset -1px -1px #666;overflow:hidden}
+.spare-stick::after{content:'';position:absolute;left:3px;right:3px;top:4px;bottom:8px;background:repeating-linear-gradient(#111 0 4px,transparent 4px 7px);opacity:.6}
+.spare-stick.full{background:#1a7a2a;box-shadow:inset 1px 1px #7f7,inset -1px -1px #040}
+.spare-stick.cur b{position:absolute;left:0;right:0;bottom:0;background:#2c9a3c}
+.spare-stick.next{opacity:.35}.spare-more{font-size:.85em;align-self:center;margin-right:3px}
