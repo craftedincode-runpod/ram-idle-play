@@ -342,3 +342,32 @@ body.pocket .dev-split{flex:1;min-height:0}
 body.pocket .dev-tree{max-height:none!important;flex:1 1 auto;min-height:0}
 body.pocket .window:not(.popup):not(.dialog) .window-body:has(> .devmgr){display:flex;flex-direction:column}
 .window.measure .dev-tree{max-height:none!important}
+/* v0.6.4: free-placed Panes 95 desktop icons on an invisible grid */
+body:not(.pocket) #deskicons{position:absolute;inset:0;display:block;max-height:none;pointer-events:none}
+body:not(.pocket) #deskicons .desk-icon{position:absolute;pointer-events:auto}
+#deskicons .desk-icon.dragging{opacity:.7;z-index:5}
+#deskmenu,.ctxmenu{position:absolute;z-index:50;background:#c0c0c0;box-shadow:inset -1px -1px #000,inset 1px 1px #fff,inset -2px -2px #808080;padding:2px}
+#deskmenu div,.ctxmenu div{padding:3px 18px;cursor:default;white-space:nowrap}#deskmenu div:hover,.ctxmenu div:hover{background:#000080;color:#fff}.ctxmenu{position:fixed;z-index:99000}
+
+/* v0.6.4 Panes 95 taskbar on any edge (desktop); the desk (work area) shrinks so windows and icons stay clear */
+body.era2.tb-top #taskbar{top:0;bottom:auto;box-shadow:inset 0 -1px #808080}
+body.era2.tb-top #desk{top:32px;bottom:0}body.era2.tb-top #gomenu{top:32px;bottom:auto}
+body.era2.tb-left #taskbar,body.era2.tb-right #taskbar{top:0;bottom:0;height:auto;width:170px;flex-direction:column;align-items:stretch;padding:3px}
+body.era2.tb-left #taskbar{right:auto}body.era2.tb-right #taskbar{left:auto}
+body.era2.tb-left #taskbar .tasks,body.era2.tb-right #taskbar .tasks{flex-direction:column}
+body.era2.tb-left #taskbar .tasks button,body.era2.tb-right #taskbar .tasks button{width:auto}
+body.era2.tb-left #taskbar .tray,body.era2.tb-right #taskbar .tray{justify-content:center;flex-wrap:wrap;height:auto;padding:3px}
+body.era2.tb-left #desk{left:170px;bottom:0}body.era2.tb-right #desk{right:170px;bottom:0}
+body.era2.tb-left #gomenu{left:170px;top:0;bottom:auto}body.era2.tb-right #gomenu{left:auto;right:170px;top:0;bottom:auto}
+.zoomrect{position:fixed;z-index:99500;pointer-events:none;border:2px solid #808080;outline:1px dotted #000;box-sizing:border-box}
+/* v0.6.4 install wizard + not-installed marker */
+.desk-icon.setup::before{content:"SETUP";position:absolute;top:-2px;left:4px;background:#000080;color:#fff;font-size:max(calc(10px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));padding:0 3px;z-index:1}
+.desk-icon.setup img{opacity:.75}
+.wiz31{padding:6px}.wiz31 p{margin:0 0 8px}.wiz-path{font-family:monospace;background:#fff;border:1px solid #808080;padding:2px 4px;margin:4px 0}
+.wiz-bar{margin:8px 0 4px}.wiz-btns{display:flex;justify-content:flex-end;gap:6px;margin-top:8px}.wiz-btns button{min-width:80px}
+.wiz95{display:flex;gap:10px;min-height:230px}
+.wiz95 .wiz-side{width:120px;flex:none;background:linear-gradient(#000080,#1084d0);display:flex;align-items:flex-start;justify-content:center;padding-top:16px}
+.wiz95 .wiz-side .wiz-ic{background:#c0c0c0;padding:6px;box-shadow:inset -1px -1px #000,inset 1px 1px #fff}
+.wiz95 .wiz-main{flex:1;min-width:0}.wiz95 h3{margin:4px 0 8px;font-size:1.1em}.wiz95 p{margin:0 0 8px}
+.wiz-lic{background:#fff;box-shadow:inset 1px 1px #808080,inset -1px -1px #dfdfdf;padding:4px 6px;max-height:120px;overflow:auto}
+.wizard .wiz-btns{border-top:1px solid #808080;padding-top:6px}
