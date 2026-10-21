@@ -50,7 +50,6 @@ body.pocket .offers{min-height:0}
 .goal{margin-top:6px;font-size:max(calc(14px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));color:#000080}
 .status-bar{display:flex;gap:2px;margin-top:3px}.status-bar-field{font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));padding:1px 4px}.status-bar-field.grow{flex:1}
 .full{color:#806000;font-weight:700}
-.membar.inswap .seg.prog{background-image:repeating-linear-gradient(90deg,transparent 0 6px,rgba(255,255,255,.35) 6px 8px)}
 /* v0.3: things that don't fit in RAM are greyed out (never punished) */
 button.nofit:disabled{opacity:.6}
 .desk-icon.nofit img,#gomenu li.nofit img{opacity:.4;filter:grayscale(1)}
@@ -64,7 +63,6 @@ button.nofit:disabled{opacity:.6}
 .membar{display:flex}.membar .seg{position:relative}
 .membar .prog{background:#1060d0}.membar .pop{background:#e040c0}
 .membar .cap{position:absolute;top:0;bottom:0;width:2px;background:#000;margin-left:-1px}
-.membar .swapcap{position:absolute;top:0;bottom:0;width:2px;background:#c89a10;margin-left:-1px}
 .membar .mtext{position:absolute;left:4px;top:0;font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));line-height:14px;color:#000;text-shadow:1px 0 #fff,-1px 0 #fff,0 1px #fff,0 -1px #fff;white-space:nowrap}
 .membar.big .mtext{line-height:20px;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
 /* program windows */
@@ -81,7 +79,6 @@ button.nofit:disabled{opacity:.6}
 .tm-table{max-height:180px}.tm-table table{width:100%;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}.tm-table td{padding:0 4px}.tm-table tr.off{color:#888}
 .tm-table button{min-width:40px;min-height:18px;padding:0 4px;font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
 .tm-foot{display:flex;justify-content:space-between;align-items:center;font-size:max(calc(14px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
-.swapbox{margin-top:6px}.sw-desc{font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}.sw-row{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:4px}
 /* dialer */
 .dialer{display:flex;gap:10px;align-items:center}.modem{display:flex;flex-direction:column;align-items:center}
 .leds{display:flex;gap:3px}.leds i{width:6px;height:6px;background:#300;display:block}.leds i.on{background:#f22}
@@ -312,19 +309,6 @@ button.bigger i{color:#801010}
 body.pocket .window .rz{display:none}
 body.pocket .window:not(.popup):not(.dialog){height:100%!important}
 /* v0.6 MotherBored */
-.mobo-intro{font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));margin-bottom:4px}
-.mobo-inst{font-weight:bold;margin:2px 0 6px;font-size:max(calc(14px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
-.mobo-slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:4px;background:#0b5d1e;padding:6px;border:2px inset #c0c0c0}
-.mobo-slots .slot{height:44px;border:1px solid #000;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:2px 0;font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
-.mobo-slots .slot.empty{background:#073d13;border:1px dashed #6fa;color:#bfe}
-.mobo-slots .slot.empty b{margin:auto;font-weight:normal}
-.mobo-slots .slot.full{background:#1f8a3b;color:#fff;border-bottom:4px solid #e0b020}
-.mobo-slots .slot.full .chips{display:flex;gap:2px}.mobo-slots .slot.full .chips i{width:9px;height:12px;background:#111}
-.mobo-buy{display:flex;flex-direction:column;gap:4px;margin-top:6px}
-.mobo-buy button{display:grid;grid-template-columns:1fr auto;text-align:left;padding:3px 6px;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
-.mobo-buy button .sp{text-align:right;font-weight:bold}.mobo-buy button .sx{grid-column:1/3;font-style:normal;font-size:.9em;color:#205020}
-.mobo-buy button.replace .sx{color:#7a3d00}.mobo-buy button:disabled{color:#3a3a3a;text-shadow:none}.mobo-buy button.nobetter{background:#d4d4d4;border-style:dashed}.mobo-buy button.nobetter b{color:#555}.mobo-buy button.nobetter .sx{color:#444}
-.mobo-buy button:disabled .sx{color:#444}.mobo-note{margin-top:4px;font-size:.9em;color:#555}
 /* v0.6.3: resized windows: inner content fills the window (to the bottom and right edges) and scrolls only when genuinely too small */
 .window.sized>.window-body{display:flex;flex-direction:column}
 .window.sized>.window-body>*{flex-shrink:0}
@@ -334,7 +318,6 @@ body.pocket .window:not(.popup):not(.dialog){height:100%!important}
 .window.sized .tm-table{max-height:none;flex:1 1 auto;min-height:80px;overflow:auto}
 .window.sized .notepad{max-height:none;flex:1 1 auto;min-height:0}
 body.era1 .window.sized .pile{max-height:none;flex:1 1 auto}
-.window.sized .mobo-buy{flex:1 1 auto}
 #w-taskmgr.sized>.window-body>div:has(> .tm-table),#w-taskmgr.sized>.window-body>.tm-table{flex:1 1 auto}
 /* mobile: Device Mangler fills the screen; the tree takes the free space, details below */
 body.pocket .devmgr{display:flex;flex-direction:column;flex:1;min-height:0;height:100%}
@@ -409,3 +392,9 @@ body.calm .hs-page *{animation:none!important}body.calm .hs-marquee span{padding
 .spare-stick.full{background:#1a7a2a;box-shadow:inset 1px 1px #7f7,inset -1px -1px #040}
 .spare-stick.cur b{position:absolute;left:0;right:0;bottom:0;background:#2c9a3c}
 .spare-stick.next{opacity:.35}.spare-more{font-size:.85em;align-self:center;margin-right:3px}
+.hs-btns{grid-template-columns:repeat(2,minmax(max-content,1fr))}.hs-btns button b{white-space:nowrap}
+body.pocket .hs-btns{grid-template-columns:1fr}
+/* v0.7.1: spare-stick bar text sits under the bar, full contrast */
+.spare-kb{font-weight:700;text-align:right;margin-top:-2px}
+.hs-mirror{font-weight:700;color:#006000;margin-bottom:4px}
+.hs-x{color:#ff0;font-style:normal;font-size:.85em}.hs-mirrors{margin:4px 0;font-size:.85em;color:#fff}.hs-mirrors a{color:#7f7;text-decoration:underline;margin:0 2px}.hs-mirrors i{color:#ff0}
