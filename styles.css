@@ -392,7 +392,8 @@ body.calm .hs-page *{animation:none!important}body.calm .hs-marquee span{padding
 .spare-stick.full{background:#1a7a2a;box-shadow:inset 1px 1px #7f7,inset -1px -1px #040}
 .spare-stick.cur b{position:absolute;left:0;right:0;bottom:0;background:#2c9a3c}
 .spare-stick.next{opacity:.35}.spare-more{font-size:.85em;align-self:center;margin-right:3px}
-.hs-btns{grid-template-columns:repeat(2,minmax(max-content,1fr))}.hs-btns button b{white-space:nowrap}
+/* v0.8.3: fluid shop grids: 2 columns when there is room, 1 when narrow; labels truncate, descriptions wrap; nothing forces width */
+.hs-btns{grid-template-columns:repeat(auto-fit,minmax(max(min(100%,260px),calc(50% - 2px)),1fr))}.window fieldset{min-width:0;min-inline-size:0}.hs-btns button{min-width:0;overflow:hidden}.hs-btns button b{white-space:normal;overflow-wrap:anywhere;min-width:0}.hs-btns button .sp{white-space:nowrap}.hs-btns button .sx{white-space:normal;overflow-wrap:anywhere}
 body.pocket .hs-btns{grid-template-columns:1fr}
 /* v0.7.1: spare-stick bar text sits under the bar, full contrast */
 .spare-kb{font-weight:700;text-align:right;margin-top:-2px}
@@ -413,3 +414,11 @@ body.pocket .hs-btns{grid-template-columns:1fr}
 body.pocket .window .dlbtn{min-height:96px!important;font-size:calc(26px*var(--ts,1))!important}
 body.calm .dlbtn .stars,body.calm .dlbtn.auto{animation:none}
 @media (prefers-reduced-motion:reduce){.dlbtn .stars,.dlbtn.auto{animation:none}.dlbtn:active{transform:none}}
+.window{min-width:min(var(--minw,200px),100%)}body.pocket .window{min-width:0}
+/* v0.8.3: Panes 95 desktop multi-select */
+#desk>.marquee{position:absolute;border:1px dotted #fff;outline:1px dotted #000;outline-offset:-1px;pointer-events:none;z-index:4}
+#deskicons .desk-icon.sel span{background:#000080;color:#fff;outline:1px dotted #fff}
+#deskicons .desk-icon.sel svg,#deskicons .desk-icon.sel img,#deskicons .desk-icon.sel canvas{filter:sepia(1) hue-rotate(190deg) saturate(4) brightness(.7)}
+/* v0.8.3: shop buttons flow: name first, price right (drops below the name when narrow), description full width */
+.hs-btns button{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:6px}
+.hs-btns button b{flex:1 1 auto}.hs-btns button .sp{margin-left:auto;padding-left:0}.hs-btns button .sx{flex:1 0 100%}
