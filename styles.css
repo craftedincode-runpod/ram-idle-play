@@ -422,3 +422,5 @@ body.calm .dlbtn .stars,body.calm .dlbtn.auto{animation:none}
 /* v0.8.3: shop buttons flow: name first, price right (drops below the name when narrow), description full width */
 .hs-btns button{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:6px}
 .hs-btns button b{flex:1 1 auto}.hs-btns button .sp{margin-left:auto;padding-left:0}.hs-btns button .sx{flex:1 0 100%}
+/* v0.8.4: visitors = the perks currency, shown as a balance line at the top of RAM perks */
+.hs-perkset .hs-vis{margin:0 0 5px;padding:3px 6px;background:#fff;border:1px solid;border-color:#808080 #fff #fff #808080;font-weight:700}
