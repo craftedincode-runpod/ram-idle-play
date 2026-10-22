@@ -435,3 +435,8 @@ body.pocket .window.gridh{height:auto}
 .hud .lc-lbl{font-size:calc(13px*var(--ts,1));letter-spacing:1px;color:#000;white-space:nowrap}
 .hud .lc-num{font-family:inherit;font-size:calc(20px*var(--ts,1));font-weight:700;color:#3f3;background:#000;padding:1px 6px;letter-spacing:2px;border:1px solid #444;white-space:nowrap;font-variant-numeric:tabular-nums;text-shadow:0 0 3px #0a0}
 body.pocket .hud .lc-num{font-size:calc(17px*var(--ts,1))}
+
+/* v0.8.8: click floaters drift a little sideways as they rise (pooled, see App.clickFloat) */
+.float.clickf{animation:flc .9s steps(9) forwards}
+@keyframes flc{to{margin-top:-50px;margin-left:var(--dx,0px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.float.clickf{animation:flc .9s steps(3) forwards}}
