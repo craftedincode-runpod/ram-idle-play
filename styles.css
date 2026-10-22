@@ -440,3 +440,4 @@ body.pocket .hud .lc-num{font-size:calc(19px*var(--ts,1))}
 .float.clickf{animation:flc .9s steps(9) forwards}
 @keyframes flc{to{margin-top:-50px;margin-left:var(--dx,0px);opacity:0}}
 @media (prefers-reduced-motion:reduce){.float.clickf{animation:flc .9s steps(3) forwards}}
+.hud .cap-why{margin:2px 0 0;font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}.hud .cap-why a{color:#0000ee;text-decoration:underline;cursor:pointer}.hud .cap-why a:visited{color:#551a8b}
