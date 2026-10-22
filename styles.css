@@ -399,3 +399,17 @@ body.pocket .hs-btns{grid-template-columns:1fr}
 .hs-mirror{font-weight:700;color:#006000;margin-bottom:4px}
 .hs-x{color:#ff0;font-style:normal;font-size:.85em}.hs-mirrors{margin:4px 0;font-size:.85em;color:#fff}.hs-mirrors a{color:#7f7;text-decoration:underline;margin:0 2px}.hs-mirrors i{color:#ff0}
 .pbtns button:disabled,.pbtns button.nofit:disabled{color:#4a4a4a!important;text-shadow:1px 1px #fff;opacity:.9}
+/* v0.8.2: program windows share one height: description always takes two lines, so 'All slots full' and short descriptions keep the layout */
+.prog .desc{min-height:2.5em;max-height:2.5em;line-height:1.25em;overflow:hidden}
+/* v0.8.2: uniform program windows - optional lines always reserve exactly one line; long labels wrap instead of widening */
+.prog .pay,.prog .extra{min-height:1.25em;max-height:1.25em;line-height:1.25em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prog .pstats{min-height:2.5em}
+.prog .tier{white-space:normal;max-width:100%}
+/* v0.8.2: the big banner button - twice as tall, bigger type, 90s bevel */
+.window .dlbtn{min-height:54px!important;height:auto;padding:6px 8px!important;font-size:calc(28px*var(--ts,1))!important;line-height:1.1;letter-spacing:1px;white-space:nowrap;overflow:hidden;border:3px outset #ff6a6a!important;box-shadow:0 0 0 1px #400,inset 0 0 0 1px #a00;text-shadow:3px 3px 0 #600!important}
+.window .dlbtn .stars{font-size:1.15em;vertical-align:-.05em;text-shadow:2px 2px 0 #840}
+.window .dlbtn:hover{filter:brightness(1.08)}
+.window .dlbtn:active{border-style:inset!important;transform:translateY(2px)}
+body.pocket .window .dlbtn{min-height:96px!important;font-size:calc(26px*var(--ts,1))!important}
+body.calm .dlbtn .stars,body.calm .dlbtn.auto{animation:none}
+@media (prefers-reduced-motion:reduce){.dlbtn .stars,.dlbtn.auto{animation:none}.dlbtn:active{transform:none}}
