@@ -71,7 +71,7 @@ button.nofit:disabled{opacity:.6}
 .pstats{display:flex;flex-direction:column;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}.pstats .r{color:#106010}.pstats .m{color:#555}
 .pbar{position:relative;height:16px;background:#fff;box-shadow:inset 1px 1px #808080}.pbar .fill{height:100%;width:0;background:#108010}
 .pbar .fname{position:absolute;left:4px;top:0;font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));line-height:16px;color:#fff;mix-blend-mode:difference}
-.pbtns{display:flex;gap:3px}.pbtns button{min-width:0;padding:0 6px}.pbtns .b1{flex:1}
+.pbtns{display:flex;flex-direction:column;gap:3px}.pbtns button{min-width:0;padding:1px 6px;white-space:nowrap;width:100%} /* v0.8.1: stacked, full width: labels never resize buttons */
 .tier{background:#ffffc0!important;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))!important}
 .extra{font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));color:#7040c0}
 /* task manager */
@@ -398,3 +398,4 @@ body.pocket .hs-btns{grid-template-columns:1fr}
 .spare-kb{font-weight:700;text-align:right;margin-top:-2px}
 .hs-mirror{font-weight:700;color:#006000;margin-bottom:4px}
 .hs-x{color:#ff0;font-style:normal;font-size:.85em}.hs-mirrors{margin:4px 0;font-size:.85em;color:#fff}.hs-mirrors a{color:#7f7;text-decoration:underline;margin:0 2px}.hs-mirrors i{color:#ff0}
+.pbtns button:disabled,.pbtns button.nofit:disabled{color:#4a4a4a!important;text-shadow:1px 1px #fff;opacity:.9}
