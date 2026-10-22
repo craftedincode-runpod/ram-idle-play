@@ -431,10 +431,10 @@ body.pocket .window.gridh{height:auto}
 .dlbtn.held{transform:translateY(2px)}
 .window .dlbtn.held{border-style:inset!important;transform:translateY(2px)}
 @media (prefers-reduced-motion:reduce){.dlbtn.held{transform:none}}
-.hud .lifectr{display:inline-flex;align-items:center;gap:6px;margin:0 auto 4px;padding:2px 4px;background:#c0c0c0;border:2px inset #fff;max-width:100%}
-.hud .lc-lbl{font-size:calc(13px*var(--ts,1));letter-spacing:1px;color:#000;white-space:nowrap}
-.hud .lc-num{font-family:inherit;font-size:calc(20px*var(--ts,1));font-weight:700;color:#3f3;background:#000;padding:1px 6px;letter-spacing:2px;border:1px solid #444;white-space:nowrap;font-variant-numeric:tabular-nums;text-shadow:0 0 3px #0a0}
-body.pocket .hud .lc-num{font-size:calc(17px*var(--ts,1))}
+.hud .lifectr{display:inline-flex;flex-wrap:wrap;justify-content:center;row-gap:2px;align-items:center;gap:6px;margin:0 auto 4px;padding:2px 4px;background:#c0c0c0;border:2px inset #fff;max-width:100%}
+.hud .lc-lbl{font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));letter-spacing:1px;color:#000;white-space:nowrap}
+.hud .lc-num{font-family:inherit;font-size:calc(22px*var(--ts,1));font-weight:700;color:#3f3;background:#000;padding:1px 6px;letter-spacing:2px;border:1px solid #444;white-space:nowrap;font-variant-numeric:tabular-nums;text-shadow:0 0 3px #0a0}
+body.pocket .hud .lc-num{font-size:calc(19px*var(--ts,1))}
 
 /* v0.8.8: click floaters drift a little sideways as they rise (pooled, see App.clickFloat) */
 .float.clickf{animation:flc .9s steps(9) forwards}
