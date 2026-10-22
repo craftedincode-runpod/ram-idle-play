@@ -26,7 +26,7 @@ button:disabled{color:#808080}
 #iconrow{position:absolute;left:4px;bottom:4px;display:flex;gap:6px;flex-wrap:wrap}
 #iconrow .desk-icon{color:#fff;text-shadow:1px 1px 0 #000}
 /* browser page */
-.menubar{display:flex;gap:14px;padding:1px 6px 3px;font-size:max(calc(14px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}.menubar span{cursor:default}.menubar u{text-decoration:underline}
+.menubar{display:flex;flex-wrap:wrap;column-gap:12px;row-gap:1px;padding:1px 6px 3px;font-size:max(calc(14px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}.menubar span{cursor:default;white-space:nowrap}.menubar u{text-decoration:underline}
 .addr{display:flex;gap:6px;align-items:center;font-size:max(calc(14px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));margin:0 2px 4px}.addr .field{flex:1;background:#fff;padding:1px 4px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;box-shadow:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a}
 .page{background:#fff;padding:8px;margin:0 2px;text-align:center;background-image:radial-gradient(#ffe 1px,transparent 1px);background-size:8px 8px;box-shadow:inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a}
 .hud .lbl{font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));color:#555;letter-spacing:2px}
@@ -304,21 +304,21 @@ button.bigger i{color:#801010}
 .window .rz-ne{top:-3px;right:-3px;width:10px;height:10px;cursor:nesw-resize}.window .rz-nw{top:-3px;left:-3px;width:10px;height:10px;cursor:nwse-resize}.window .rz-sw{bottom:-3px;left:-3px;width:10px;height:10px;cursor:nesw-resize}
 .window .rz-se{right:1px;bottom:1px;width:14px;height:14px;cursor:nwse-resize;
   background:linear-gradient(135deg,transparent 0 45%,#fff 45% 52%,#808080 52% 60%,transparent 60% 66%,#fff 66% 72%,#808080 72% 80%,transparent 80% 86%,#fff 86% 92%,#808080 92%)}
-.window.sized{display:flex;flex-direction:column;max-width:none}
-.window.sized>.window-body{flex:1;min-height:0;overflow:auto}
+.window.sized,.window.gridh{display:flex;flex-direction:column;max-width:none}
+.window.sized>.window-body,.window.gridh>.window-body{flex:1;min-height:0;overflow:auto}
 body.pocket .window .rz{display:none}
 body.pocket .window:not(.popup):not(.dialog){height:100%!important}
 /* v0.6 MotherBored */
 /* v0.6.3: resized windows: inner content fills the window (to the bottom and right edges) and scrolls only when genuinely too small */
-.window.sized>.window-body{display:flex;flex-direction:column}
-.window.sized>.window-body>*{flex-shrink:0}
-.window.sized .devmgr{flex:1 1 auto;display:flex;flex-direction:column;min-height:0}
-.window.sized .dev-split{flex:1 1 auto;min-height:120px}
-.window.sized .dev-tree{max-height:none!important;min-height:0}
-.window.sized .tm-table{max-height:none;flex:1 1 auto;min-height:80px;overflow:auto}
-.window.sized .notepad{max-height:none;flex:1 1 auto;min-height:0}
-body.era1 .window.sized .pile{max-height:none;flex:1 1 auto}
-#w-taskmgr.sized>.window-body>div:has(> .tm-table),#w-taskmgr.sized>.window-body>.tm-table{flex:1 1 auto}
+.window.sized>.window-body,.window.gridh>.window-body{display:flex;flex-direction:column}
+.window.sized>.window-body>*,.window.gridh>.window-body>*{flex-shrink:0}
+.window.sized .devmgr,.window.gridh .devmgr{flex:1 1 auto;display:flex;flex-direction:column;min-height:0}
+.window.sized .dev-split,.window.gridh .dev-split{flex:1 1 auto;min-height:120px}
+.window.sized .dev-tree,.window.gridh .dev-tree{max-height:none!important;min-height:0}
+.window.sized .tm-table,.window.gridh .tm-table{max-height:none;flex:1 1 auto;min-height:80px;overflow:auto}
+.window.sized .notepad,.window.gridh .notepad{max-height:none;flex:1 1 auto;min-height:0}
+body.era1 .window.sized .pile,body.era1 .window.gridh .pile{max-height:none;flex:1 1 auto}
+#w-taskmgr.sized>.window-body>div:has(> .tm-table),#w-taskmgr.sized>.window-body>.tm-table,#w-taskmgr.gridh>.window-body>div:has(> .tm-table),#w-taskmgr.gridh>.window-body>.tm-table{flex:1 1 auto}
 /* mobile: Device Mangler fills the screen; the tree takes the free space, details below */
 body.pocket .devmgr{display:flex;flex-direction:column;flex:1;min-height:0;height:100%}
 body.pocket .dev-split{flex:1;min-height:0}
@@ -424,3 +424,5 @@ body.calm .dlbtn .stars,body.calm .dlbtn.auto{animation:none}
 .hs-btns button b{flex:1 1 auto}.hs-btns button .sp{margin-left:auto;padding-left:0}.hs-btns button .sx{flex:1 0 100%}
 /* v0.8.4: visitors = the perks currency, shown as a balance line at the top of RAM perks */
 .hs-perkset .hs-vis{margin:0 0 5px;padding:3px 6px;background:#fff;border:1px solid;border-color:#808080 #fff #fff #808080;font-weight:700}
+body.pocket .window.gridh{height:auto}
+#w-dialer.gridh>.window-body{margin:4px 6px;padding-top:0;padding-bottom:0}#w-dialer.gridh .conn-next{margin:2px 0}
