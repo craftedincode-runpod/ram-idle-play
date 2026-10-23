@@ -441,3 +441,12 @@ body.pocket .hud .lc-num{font-size:calc(19px*var(--ts,1))}
 @keyframes flc{to{margin-top:-50px;margin-left:var(--dx,0px);opacity:0}}
 @media (prefers-reduced-motion:reduce){.float.clickf{animation:flc .9s steps(3) forwards}}
 .hud .cap-why{margin:2px 0 0;font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}.hud .cap-why a{color:#0000ee;text-decoration:underline;cursor:pointer}.hud .cap-why a:visited{color:#551a8b}
+
+/* v0.8.16: Device Mangler 'fastest route to Panes 95' cue: blinking arrow + glowing yellow border on path items not yet bought (static when motion is reduced) */
+.dev-route{margin:3px 0 4px;padding:3px 6px;background:#fff3a0;border:1px solid #a07800;color:#000;font-weight:700;font-size:.9em}
+.dev-tree .perk.route{border:2px solid #d4a000;background:#fffbd0;box-shadow:0 0 4px 1px #ffd84a;animation:routeglow 1.2s steps(2,end) infinite}
+.dev-tree .perk.route .pn::before{content:'\25BA ';color:#c07000;animation:routearrow 1s steps(2,end) infinite}
+.dev-tree .perk.route.sel{background:#000080}
+@keyframes routeglow{0%{box-shadow:0 0 2px 0 #ffd84a}100%{box-shadow:0 0 7px 2px #ffb000}}
+@keyframes routearrow{0%{opacity:1}100%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.dev-tree .perk.route,.dev-tree .perk.route .pn::before{animation:none}}
