@@ -177,6 +177,22 @@ body.era2 .window:not(.active):not(.top) .title-bar{background:linear-gradient(9
 #gomenu ul{list-style:none;margin:0;padding:0;flex:1}#gomenu li{display:flex;gap:8px;align-items:center;padding:4px 10px 4px 6px;font-size:max(calc(15px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));cursor:default}
 #gomenu li:hover{background:#000080;color:#fff}#gomenu hr{border:0;border-top:1px solid grey;border-bottom:1px solid #fff;margin:2px}
 body.era2 .dlbtn{background:#c01818!important}
+/* v0.9.0 Panes 98 (body.era2.era3): sky desktop, gradient title bars, Quick Launch strip, flat-ish toolbar buttons, gradient Go menu side */
+body.era3{background-color:#2a5d9c;background-image:radial-gradient(ellipse at 22% 20%,rgba(255,255,255,.55) 0 8%,transparent 24%),radial-gradient(ellipse at 70% 30%,rgba(255,255,255,.4) 0 6%,transparent 20%),radial-gradient(ellipse at 45% 62%,rgba(255,255,255,.3) 0 5%,transparent 18%),linear-gradient(#1c4f8f,#6aa2d8 70%,#9cc6ec)}
+body.era3 .window.active .title-bar,body.era3 .window.top .title-bar{background:linear-gradient(90deg,#0a246a,#a6caf0)}
+body.era3 .window:not(.active):not(.top) .title-bar{background:linear-gradient(90deg,#808080,#c8c8c8)}
+body.era3 #taskbar{box-shadow:inset 0 1px #fff,inset 0 2px #dfdfdf,0 -1px #808080}
+body.era3 #gomenu .side{background:linear-gradient(#0a246a,#4a86c8)}
+body.era3 #gomenu li:hover{background:linear-gradient(90deg,#0a246a,#4a86c8)}
+body.era3 .dlbar .fill{background:linear-gradient(90deg,#0a246a,#4a86c8)}
+body.era3 .wiz98 .wiz-side{background:linear-gradient(#0a246a,#a6caf0)}
+#overlay.splash3{background:linear-gradient(#0a246a,#6aa2d8 80%,#bcd8f2);color:#fff}
+#overlay.splash3 .os{text-shadow:2px 2px 0 #0a246a;letter-spacing:-1px}
+.ql{display:flex;gap:1px;align-items:center;padding:0 4px;margin-right:2px;box-shadow:-1px 0 #808080,1px 0 #fff,-2px 0 #fff,2px 0 #808080;flex:none}
+#taskbar .ql button.qlb{width:25px;min-width:25px;padding:0;justify-content:center;background:transparent;box-shadow:none;border:1px solid transparent}
+#taskbar .ql button.qlb:hover{box-shadow:inset -1px -1px #808080,inset 1px 1px #fff}
+#taskbar .ql button.qlb:active{box-shadow:inset 1px 1px #808080,inset -1px -1px #fff}
+body.era3.tb-left .ql,body.era3.tb-right .ql{justify-content:center}
 
 /* ===================== POCKET layout (phones): one maximised window at a time ===================== */
 #pockettop{display:none}
