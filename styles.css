@@ -450,13 +450,13 @@ body.pocket .window.gridh{height:auto}
 /* v0.9.5: the readout scales with its window (JS fits --on numbers / --ot text / --op padding+borders on #odo, see App.odoFit). Numbers: full fit; text: sub-linear; padding/borders in between. */
 .odo-fit{position:relative;overflow:hidden;min-height:calc(40px*var(--ts,1));width:100%;box-sizing:border-box}
 #w-counter .odo-fit{flex:1 1 0;min-height:0}
-.odo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max-content;max-width:none;display:flex;flex-direction:column;align-items:center;gap:calc(2px*var(--op,1));margin:0;padding:calc(2px*var(--op,1)) calc(4px*var(--op,1));background:#c0c0c0;border:calc(2px*var(--op,1)) inset #fff;box-sizing:border-box}.odo .odo-sp{height:calc(3px*var(--op,1))}
-.odo .lc-lbl{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--ot,1));letter-spacing:calc(1px*var(--ot,1));color:#000;white-space:nowrap}
-.odo .lc-num{font-family:inherit;font-size:calc(22px*var(--ts,1)*var(--on,1));font-weight:700;color:#3f3;background:#000;padding:calc(1px*var(--op,1)) calc(6px*var(--op,1));letter-spacing:calc(2px*var(--on,1));border:calc(1px*var(--op,1)) solid #444;white-space:nowrap;font-variant-numeric:tabular-nums;text-shadow:0 0 calc(3px*var(--op,1)) #0a0;box-sizing:border-box;text-align:right;overflow:hidden}
-.odo .lc-num.odo-big{font-size:calc(17px*var(--ts,1)*var(--on,1));letter-spacing:calc(1px*var(--on,1));font-variant-numeric:tabular-nums}
-body.pocket .odo-fit,body.pocket #w-counter .odo-fit{overflow:visible;flex:none;min-height:0}body.pocket .odo{position:static;transform:none;width:auto;max-width:100%;margin:0 auto}body.pocket .odo .lc-num{max-width:100%}
+#odo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max-content;max-width:none;display:flex;flex-direction:column;align-items:center;gap:calc(2px*var(--op,1));margin:0;padding:calc(2px*var(--op,1)) calc(4px*var(--op,1));background:#c0c0c0;border:calc(2px*var(--op,1)) inset #fff;box-sizing:border-box}#odo .odo-sp{height:calc(3px*var(--op,1))}
+#odo .lc-lbl{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--ot,1));letter-spacing:calc(1px*var(--ot,1));color:#000;white-space:nowrap}
+#odo .lc-num{font-family:inherit;font-size:calc(22px*var(--ts,1)*var(--on,1));font-weight:700;color:#3f3;background:#000;padding:calc(1px*var(--op,1)) calc(6px*var(--op,1));letter-spacing:calc(2px*var(--on,1));border:calc(1px*var(--op,1)) solid #444;white-space:nowrap;font-variant-numeric:tabular-nums;text-shadow:0 0 calc(3px*var(--op,1)) #0a0;box-sizing:border-box;text-align:right;overflow:hidden}
+#odo .lc-num.odo-big{font-size:calc(17px*var(--ts,1)*var(--on,1));letter-spacing:calc(1px*var(--on,1));font-variant-numeric:tabular-nums}
+body.pocket .odo-fit,body.pocket #w-counter .odo-fit{overflow:visible;flex:none;min-height:0}body.pocket #odo{position:static;transform:none;width:auto;max-width:100%;margin:0 auto}body.pocket #odo .lc-num{max-width:100%}
 #w-counter.gridh>.window-body{margin:4px 6px;padding-top:0;padding-bottom:0}
-body.pocket .odo .lc-num{font-size:calc(19px*var(--ts,1))}
+body.pocket #odo .lc-num{font-size:calc(19px*var(--ts,1))}
 
 /* v0.8.8: click floaters drift a little sideways as they rise (pooled, see App.clickFloat) */
 .float.clickf{animation:flc .9s steps(9) forwards}
@@ -472,3 +472,9 @@ body.pocket .odo .lc-num{font-size:calc(19px*var(--ts,1))}
 @keyframes routeglow{0%{box-shadow:0 0 2px 0 #ffd84a}100%{box-shadow:0 0 7px 2px #ffb000}}
 @keyframes routearrow{0%{opacity:1}100%{opacity:.25}}
 @media (prefers-reduced-motion:reduce){.dev-tree .perk.route,.dev-tree .perk.route .pn::before{animation:none}}
+
+/* v0.9.6: the HomeSteadz visitor hit counter is always one horizontal row of fixed-width digit cells (it shares the .odo name with nothing any more: the Download-O-Meter is #odo).
+   The label and the counter wrap onto two centred lines when the window is very narrow; they never overlap the banner or each other. */
+.hs-counter{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;column-gap:6px;row-gap:3px;position:relative;clear:both}
+.hs-counter .odo{position:static;transform:none;display:inline-flex;flex-direction:row;flex-wrap:nowrap;flex:none;width:auto;white-space:nowrap;margin:0;padding:0;border:0;background:none;gap:1px;vertical-align:middle}
+.hs-counter .odo i{display:block;flex:none;box-sizing:border-box;width:1.45em;padding:0;text-align:center;line-height:1.35;white-space:nowrap}
