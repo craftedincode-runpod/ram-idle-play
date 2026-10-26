@@ -447,10 +447,14 @@ body.pocket .window.gridh{height:auto}
 .dlbtn.held{transform:translateY(2px)}
 .window .dlbtn.held{border-style:inset!important;transform:translateY(2px)}
 @media (prefers-reduced-motion:reduce){.dlbtn.held{transform:none}}
-.odo{display:flex;flex-direction:column;align-items:center;gap:2px;margin:0 auto;padding:2px 4px;background:#c0c0c0;border:2px inset #fff;max-width:100%;box-sizing:border-box}.odo .odo-sp{height:3px}
-.odo .lc-lbl{font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));letter-spacing:1px;color:#000;white-space:nowrap}
-.odo .lc-num{font-family:inherit;font-size:calc(22px*var(--ts,1));font-weight:700;color:#3f3;background:#000;padding:1px 6px;letter-spacing:2px;border:1px solid #444;white-space:nowrap;font-variant-numeric:tabular-nums;text-shadow:0 0 3px #0a0;max-width:100%;box-sizing:border-box;text-align:right;overflow:hidden}
-.odo .lc-num.odo-big{font-size:calc(17px*var(--ts,1));letter-spacing:1px;font-variant-numeric:tabular-nums}
+/* v0.9.5: the readout scales with its window (JS fits --on numbers / --ot text / --op padding+borders on #odo, see App.odoFit). Numbers: full fit; text: sub-linear; padding/borders in between. */
+.odo-fit{position:relative;overflow:hidden;min-height:calc(40px*var(--ts,1));width:100%;box-sizing:border-box}
+#w-counter .odo-fit{flex:1 1 0;min-height:0}
+.odo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max-content;max-width:none;display:flex;flex-direction:column;align-items:center;gap:calc(2px*var(--op,1));margin:0;padding:calc(2px*var(--op,1)) calc(4px*var(--op,1));background:#c0c0c0;border:calc(2px*var(--op,1)) inset #fff;box-sizing:border-box}.odo .odo-sp{height:calc(3px*var(--op,1))}
+.odo .lc-lbl{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--ot,1));letter-spacing:calc(1px*var(--ot,1));color:#000;white-space:nowrap}
+.odo .lc-num{font-family:inherit;font-size:calc(22px*var(--ts,1)*var(--on,1));font-weight:700;color:#3f3;background:#000;padding:calc(1px*var(--op,1)) calc(6px*var(--op,1));letter-spacing:calc(2px*var(--on,1));border:calc(1px*var(--op,1)) solid #444;white-space:nowrap;font-variant-numeric:tabular-nums;text-shadow:0 0 calc(3px*var(--op,1)) #0a0;box-sizing:border-box;text-align:right;overflow:hidden}
+.odo .lc-num.odo-big{font-size:calc(17px*var(--ts,1)*var(--on,1));letter-spacing:calc(1px*var(--on,1));font-variant-numeric:tabular-nums}
+body.pocket .odo-fit,body.pocket #w-counter .odo-fit{overflow:visible;flex:none;min-height:0}body.pocket .odo{position:static;transform:none;width:auto;max-width:100%;margin:0 auto}body.pocket .odo .lc-num{max-width:100%}
 #w-counter.gridh>.window-body{margin:4px 6px;padding-top:0;padding-bottom:0}
 body.pocket .odo .lc-num{font-size:calc(19px*var(--ts,1))}
 
