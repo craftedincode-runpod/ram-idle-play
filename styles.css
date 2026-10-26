@@ -478,3 +478,10 @@ body.pocket #odo .lc-num{font-size:calc(19px*var(--ts,1))}
 .hs-counter{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;column-gap:6px;row-gap:3px;position:relative;clear:both}
 .hs-counter .odo{position:static;transform:none;display:inline-flex;flex-direction:row;flex-wrap:nowrap;flex:none;width:auto;white-space:nowrap;margin:0;padding:0;border:0;background:none;gap:1px;vertical-align:middle}
 .hs-counter .odo i{display:block;flex:none;box-sizing:border-box;width:1.45em;padding:0;text-align:center;line-height:1.35;white-space:nowrap}
+/* v0.10.0: readme.txt notes, unread mark, finale dialog */
+.desk-icon.unread::after{content:attr(data-n);position:absolute;top:-2px;right:6px;min-width:1em;text-align:center;background:#d02020;color:#fff;font-size:max(calc(11px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));padding:0 3px}
+.notepad .rd-h{margin:8px 0 4px;font-weight:bold}.notepad .rd-note{margin:0 0 6px;padding:2px 0 2px 4px;border-left:2px solid #808080}.notepad .rd-note.new{border-left-color:#d02020}
+.notepad .rd-new{background:#d02020;color:#fff;font-size:.8em;padding:0 3px}
+.window.finale .fin-page{flex:1;min-height:12em}.window.finale h3{margin:0 0 6px;font-size:1.1em}.window.finale .fin-body div{margin:0 0 2px}
+.window.finale .fin-stats{border-collapse:collapse;width:100%}.window.finale .fin-stats td{padding:1px 4px;border-bottom:1px dotted #808080}.window.finale .fin-stats td+td{text-align:right;font-weight:bold}
+.window.finale .fin-n{text-align:center;margin-top:4px}
