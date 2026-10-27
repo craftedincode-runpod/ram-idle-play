@@ -485,3 +485,6 @@ body.pocket #odo .lc-num{font-size:calc(19px*var(--ts,1))}
 .window.finale .fin-page{flex:1;min-height:12em}.window.finale h3{margin:0 0 6px;font-size:1.1em}.window.finale .fin-body div{margin:0 0 2px}
 .window.finale .fin-stats{border-collapse:collapse;width:100%}.window.finale .fin-stats td{padding:1px 4px;border-bottom:1px dotted #808080}.window.finale .fin-stats td+td{text-align:right;font-weight:bold}
 .window.finale .fin-n{text-align:center;margin-top:4px}
+
+/* v0.10.2: MemSqueeze 'Memory -N%' line is a link, styled like the 'Why did my RAM stop?' link */
+.prog .extra a.sq-why{color:#0000ee;text-decoration:underline;cursor:pointer}.prog .extra a.sq-why:visited{color:#551a8b}
