@@ -505,3 +505,32 @@ body.pocket #w-browser .page .dlbtn{min-height:96px!important;font-size:calc(26p
 body.pocket #w-browser .offers{min-height:0}
 /* a resized window: the page fills it, content stays at the top, nothing is stretched */
 #w-browser.sized>.window-body>.page{flex:1 0 auto}
+
+/* v0.10.8: RAM Bucket (WebWanderer): drawn in SVG/CSS, one skin per era. Level + chips animate; no images, no icons from any real OS. */
+#w-browser .bin{display:flex;align-items:center;gap:calc(8px*var(--wp,1));margin:calc(4px*var(--wp,1)) auto 0;max-width:92%;text-align:left;--bk:#c0c0c0;--bd:#000;--lv:#2f9e44;--bt:#555}
+#w-browser .bin[hidden]{display:none}
+#w-browser .bin-pic{position:relative;flex:none;width:calc(40px*var(--wt,1));height:calc(46px*var(--wt,1))}
+#w-browser .bin-pic svg{width:100%;height:100%;display:block;overflow:visible}
+#w-browser .bin-back{fill:#e8e8e8}.bin-lvl{fill:var(--lv)}.bin-pins{fill:none}
+#w-browser .bin-body{fill:none;stroke:var(--bd);stroke-width:1.6}.bin-rim{fill:var(--bk);stroke:var(--bd);stroke-width:1.4}.bin-hand{fill:none;stroke:var(--bd);stroke-width:1.4}
+#w-browser .bin-ram{font:700 9px PixelOp,monospace;fill:var(--bd);paint-order:stroke;stroke:#fff;stroke-width:2px}
+#w-browser .bin-chips{position:absolute;left:0;right:0;top:-26px;height:34px;pointer-events:none;overflow:visible}
+#w-browser .bin-chips i{position:absolute;left:18px;top:0;width:11px;height:6px;background:#1f7a33;border:1px solid #0b3d17;box-shadow:inset 0 -2px 0 #d8b030;opacity:0}
+#w-browser .bin-chips i:nth-child(2){left:10px}#w-browser .bin-chips i:nth-child(3){left:24px}#w-browser .bin-chips i:nth-child(4){left:15px}
+#w-browser .bin[data-st=spill] .bin-chips i{animation:chipdrop 1.1s linear infinite}
+#w-browser .bin[data-st=spill] .bin-chips i:nth-child(2){animation-delay:.28s}#w-browser .bin[data-st=spill] .bin-chips i:nth-child(3){animation-delay:.55s}#w-browser .bin[data-st=spill] .bin-chips i:nth-child(4){animation-delay:.83s}
+@keyframes chipdrop{0%{transform:translate(0,-6px) rotate(-12deg);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translate(0,32px) rotate(24deg);opacity:0}}
+#w-browser .bin[data-st=full] .bin-chips i{animation:chipbounce .9s ease-out infinite;background:#a02020;border-color:#400}
+#w-browser .bin[data-st=full] .bin-chips i:nth-child(2){animation-delay:.22s}#w-browser .bin[data-st=full] .bin-chips i:nth-child(3){animation-delay:.45s;--dx:16px}#w-browser .bin[data-st=full] .bin-chips i:nth-child(4){animation-delay:.67s;--dx:-18px}
+@keyframes chipbounce{0%{transform:translate(0,-6px);opacity:0}20%{opacity:1}45%{transform:translate(0,22px)}100%{transform:translate(var(--dx,-14px),6px) rotate(70deg);opacity:0}}
+#w-browser .bin[data-st=full] .bin-body,#w-browser .bin[data-st=full] .bin-rim{stroke:#c00000}
+#w-browser .bin-txt{display:flex;flex-direction:column;gap:2px;min-width:calc(110px*var(--wt,1))}
+#w-browser .bin-lbl{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--wt,1));color:var(--bt);white-space:nowrap}.bin-lbl b{color:#000}
+#w-browser .bin-bar{height:calc(9px*var(--wt,1));background:#fff;border:1px solid var(--bd)}#w-browser .bin-bar i{display:block;height:100%;width:0;background:var(--lv)}
+#w-browser .bin[data-st=full] .bin-bar i{background:#c00000}
+#w-browser .bin-msg{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--wt,1));font-weight:700;color:#1a6b2a;min-height:1.2em;line-height:1.2em}
+#w-browser .bin[data-st=full] .bin-msg{color:#c00000}
+body.era1 #w-browser .bin-body,body.era1 #w-browser .bin-rim{shape-rendering:crispEdges}body.era1 #w-browser .bin{--bk:#fff;--lv:#000}body.era1 #w-browser .bin-lvl{fill:#808080}body.era1 #w-browser .bin-bar i{background:#000}
+body.era2 #w-browser .bin{--bk:#d4d0c8;--lv:#2f9e44}body.era2 #w-browser .bin-bar{box-shadow:inset 1px 1px #808080}
+body.era3 #w-browser .bin{--bk:#cfe3f7;--bd:#2a4a73;--lv:#35b04f;--bt:#355}body.era3 #w-browser .bin-lvl{filter:drop-shadow(0 0 2px #6fe08a)}body.era3 #w-browser .bin-rim{fill:#e6f1fb}body.era3 #w-browser .bin-bar{border-radius:5px;overflow:hidden;background:#e4eef8}
+@media (prefers-reduced-motion:reduce){#w-browser .bin[data-st] .bin-chips i{animation-duration:2.2s}}
