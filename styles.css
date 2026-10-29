@@ -529,3 +529,5 @@ body.era1 #w-bucket .bin-body,body.era1 #w-bucket .bin-rim{shape-rendering:crisp
 body.era2 #w-bucket .bin{--bk:#d4d0c8;--lv:#2f9e44}body.era2 #w-bucket .bin-bar{box-shadow:inset 1px 1px #808080}
 body.era3 #w-bucket .bin{--bk:#cfe3f7;--bd:#2a4a73;--lv:#35b04f;--bt:#355}body.era3 #w-bucket .bin-lvl{filter:drop-shadow(0 0 2px #6fe08a)}body.era3 #w-bucket .bin-rim{fill:#e6f1fb}body.era3 #w-bucket .bin-bar{border-radius:5px;overflow:hidden;background:#e4eef8}
 @media (prefers-reduced-motion:reduce){#w-bucket .bin[data-st] .bin-chips i{animation-duration:2.2s}}
+/* v0.10.10: background mode (programs pay x IDLE.mult): RAM/s line turns blue, same size */
+.hud .rate.idle{color:#1040b0}
