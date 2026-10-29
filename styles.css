@@ -523,7 +523,7 @@ body.pocket #w-browser .offers{min-height:0}
 #w-bucket .bin-lbl{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--wt,1));color:var(--bt);overflow-wrap:anywhere}.bin-lbl b{color:#000}
 #w-bucket .bin-bar{height:calc(9px*var(--wt,1));background:#fff;border:1px solid var(--bd)}#w-bucket .bin-bar i{display:block;height:100%;width:0;background:var(--lv)}
 #w-bucket .bin[data-st=full] .bin-bar i{background:#c00000}
-#w-bucket .bin-amt{font-size:13px;color:var(--bt);overflow-wrap:anywhere}#w-bucket .bin-msg{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--wt,1));font-weight:700;color:#1a6b2a;min-height:1.2em;line-height:1.2em}
+#w-bucket .bin-amt{font-size:calc(20px*var(--ts,1));font-weight:bold;color:var(--bt);overflow-wrap:anywhere}#w-bucket .bin-msg{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--wt,1));font-weight:700;color:#1a6b2a;min-height:1.2em;line-height:1.2em}
 #w-bucket .bin[data-st=full] .bin-msg{color:#c00000}
 body.era1 #w-bucket .bin-body,body.era1 #w-bucket .bin-rim{shape-rendering:crispEdges}body.era1 #w-bucket .bin{--bk:#fff;--lv:#000}body.era1 #w-bucket .bin-lvl{fill:#808080}body.era1 #w-bucket .bin-bar i{background:#000}
 body.era2 #w-bucket .bin{--bk:#d4d0c8;--lv:#2f9e44}body.era2 #w-bucket .bin-bar{box-shadow:inset 1px 1px #808080}
