@@ -501,33 +501,5 @@ body.pocket #w-browser .offers{min-height:0}
 /* a resized window: the page fills it, content stays at the top, nothing is stretched */
 #w-browser.sized>.window-body>.page{flex:1 0 auto}
 
-/* v0.10.8: RAM Bucket (WebWanderer): drawn in SVG/CSS, one skin per era. Level + chips animate; no images, no icons from any real OS. */
-#w-bucket .bucket{padding:20px 8px 6px}#w-bucket .bin{display:flex;align-items:center;gap:10px;margin:0;--wt:1.15;text-align:left;--bk:#c0c0c0;--bd:#000;--lv:#2f9e44;--bt:#555}
-#w-bucket .bin[hidden]{display:none}
-#w-bucket .bin-pic{position:relative;flex:none;width:calc(40px*var(--wt,1));height:calc(46px*var(--wt,1))}
-#w-bucket .bin-pic svg{width:100%;height:100%;display:block;overflow:visible}
-#w-bucket .bin-back{fill:#e8e8e8}.bin-lvl{fill:var(--lv)}.bin-pins{fill:none}
-#w-bucket .bin-body{fill:none;stroke:var(--bd);stroke-width:1.6}.bin-rim{fill:var(--bk);stroke:var(--bd);stroke-width:1.4}.bin-hand{fill:none;stroke:var(--bd);stroke-width:1.4}
-#w-bucket .bin-ram{font:700 9px PixelOp,monospace;fill:var(--bd);paint-order:stroke;stroke:#fff;stroke-width:2px}
-#w-bucket .bin-chips{position:absolute;left:0;right:0;top:-26px;height:34px;pointer-events:none;overflow:visible}
-#w-bucket .bin-chips i{position:absolute;left:18px;top:0;width:11px;height:6px;background:#1f7a33;border:1px solid #0b3d17;box-shadow:inset 0 -2px 0 #d8b030;opacity:0}
-#w-bucket .bin-chips i:nth-child(2){left:10px}#w-bucket .bin-chips i:nth-child(3){left:24px}#w-bucket .bin-chips i:nth-child(4){left:15px}
-#w-bucket .bin[data-st=spill] .bin-chips i{animation:chipdrop 1.1s linear infinite}
-#w-bucket .bin[data-st=spill] .bin-chips i:nth-child(2){animation-delay:.28s}#w-bucket .bin[data-st=spill] .bin-chips i:nth-child(3){animation-delay:.55s}#w-bucket .bin[data-st=spill] .bin-chips i:nth-child(4){animation-delay:.83s}
-@keyframes chipdrop{0%{transform:translate(0,-6px) rotate(-12deg);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translate(0,32px) rotate(24deg);opacity:0}}
-#w-bucket .bin[data-st=full] .bin-chips i{animation:chipbounce .9s ease-out infinite;background:#a02020;border-color:#400}
-#w-bucket .bin[data-st=full] .bin-chips i:nth-child(2){animation-delay:.22s}#w-bucket .bin[data-st=full] .bin-chips i:nth-child(3){animation-delay:.45s;--dx:16px}#w-bucket .bin[data-st=full] .bin-chips i:nth-child(4){animation-delay:.67s;--dx:-18px}
-@keyframes chipbounce{0%{transform:translate(0,-6px);opacity:0}20%{opacity:1}45%{transform:translate(0,22px)}100%{transform:translate(var(--dx,-14px),6px) rotate(70deg);opacity:0}}
-#w-bucket .bin[data-st=full] .bin-body,#w-bucket .bin[data-st=full] .bin-rim{stroke:#c00000}
-#w-bucket .bin-txt{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
-#w-bucket .bin-lbl{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--wt,1));color:var(--bt);overflow-wrap:anywhere}.bin-lbl b{color:#000}
-#w-bucket .bin-bar{height:calc(9px*var(--wt,1));background:#fff;border:1px solid var(--bd)}#w-bucket .bin-bar i{display:block;height:100%;width:0;background:var(--lv)}
-#w-bucket .bin[data-st=full] .bin-bar i{background:#c00000}
-#w-bucket .bin-amt{font-size:calc(20px*var(--ts,1));font-weight:bold;color:var(--bt);overflow-wrap:anywhere}#w-bucket .bin-msg{font-size:calc(max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))*var(--wt,1));font-weight:700;color:#1a6b2a;min-height:1.2em;line-height:1.2em}
-#w-bucket .bin[data-st=full] .bin-msg{color:#c00000}
-body.era1 #w-bucket .bin-body,body.era1 #w-bucket .bin-rim{shape-rendering:crispEdges}body.era1 #w-bucket .bin{--bk:#fff;--lv:#000}body.era1 #w-bucket .bin-lvl{fill:#808080}body.era1 #w-bucket .bin-bar i{background:#000}
-body.era2 #w-bucket .bin{--bk:#d4d0c8;--lv:#2f9e44}body.era2 #w-bucket .bin-bar{box-shadow:inset 1px 1px #808080}
-body.era3 #w-bucket .bin{--bk:#cfe3f7;--bd:#2a4a73;--lv:#35b04f;--bt:#355}body.era3 #w-bucket .bin-lvl{filter:drop-shadow(0 0 2px #6fe08a)}body.era3 #w-bucket .bin-rim{fill:#e6f1fb}body.era3 #w-bucket .bin-bar{border-radius:5px;overflow:hidden;background:#e4eef8}
-@media (prefers-reduced-motion:reduce){#w-bucket .bin[data-st] .bin-chips i{animation-duration:2.2s}}
 /* v0.10.10: background mode (programs pay x IDLE.mult): RAM/s line turns blue, same size */
 .hud .rate.idle{color:#1040b0}
