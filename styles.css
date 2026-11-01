@@ -503,3 +503,8 @@ body.pocket #w-browser .offers{min-height:0}
 
 /* v0.10.10: background mode (programs pay x IDLE.mult): RAM/s line turns blue, same size */
 .hud .rate.idle{color:#1040b0}
+
+/* v0.10.15: pop-up open = downloaders paused; golden pop-up boost */
+.hud .rate.frozen{color:#a00000}
+.hud .rate.frenzy{color:#b08000;font-weight:bold}
+.fill.frozen{background:repeating-linear-gradient(45deg,#808080 0 6px,#a0a0a0 6px 12px)!important}
