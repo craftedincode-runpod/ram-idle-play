@@ -410,7 +410,8 @@ body.pocket .hs-btns{grid-template-columns:1fr}
 .spare-kb{font-weight:700;text-align:right;margin-top:-2px}
 .hs-mirror{font-weight:700;color:#006000;margin-bottom:4px}
 .hs-x{color:#ff0;font-style:normal;font-size:.85em}.hs-mirrors{margin:4px 0;font-size:.85em;color:#fff}.hs-mirrors a{color:#7f7;text-decoration:underline;margin:0 2px}.hs-mirrors i{color:#ff0}
-.pbtns button:disabled,.pbtns button.nofit:disabled{color:#4a4a4a!important;text-shadow:1px 1px #fff;opacity:.9}
+/* v0.10.17 (Ray): greyed install buttons look exactly like a greyed Dialer upgrade button (98.css button:disabled: #808080 text, white emboss, full opacity) */
+.pbtns button:disabled,.pbtns button.nofit:disabled{color:#808080!important;text-shadow:1px 1px 0 #fff;opacity:1}
 /* v0.8.2: program windows share one height: description always takes two lines, so 'All slots full' and short descriptions keep the layout */
 .prog .desc{min-height:2.5em;max-height:2.5em;line-height:1.25em;overflow:hidden}
 /* v0.8.2: uniform program windows - optional lines always reserve exactly one line; long labels wrap instead of widening */
