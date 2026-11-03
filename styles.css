@@ -365,36 +365,11 @@ body.era2.tb-left #gomenu{left:170px;top:0;bottom:auto}body.era2.tb-right #gomen
 .wiz95 .wiz-main{flex:1;min-width:0}.wiz95 h3{margin:4px 0 8px;font-size:1.1em}.wiz95 p{margin:0 0 8px}
 .wiz-lic{background:#fff;box-shadow:inset 1px 1px #808080,inset -1px -1px #dfdfdf;padding:4px 6px;max-height:120px;overflow:auto}
 .wizard .wiz-btns{border-top:1px solid #808080;padding-top:6px}
-/* v0.7 HomeSteadz: a period personal homepage, all CSS */
-.hs-url{font-family:monospace;background:#fff;box-shadow:inset 1px 1px #808080;padding:2px 4px;margin-bottom:4px;font-size:.85em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.hs-page{position:relative;padding:10px;text-align:center;color:#ff0;font-family:'Comic Sans MS','Comic Neue',cursive,sans-serif;min-height:170px;
-  background-color:#000040;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#9cf 1px,transparent 1.5px);background-size:22px 22px,37px 37px;background-position:0 0,11px 17px;box-shadow:inset 1px 1px #808080}
-.hs-page.tacky{background-color:#300040}
-.hs-h1{margin:0 0 6px;font-size:1.35em;color:#0ff;text-shadow:2px 2px #f0f}
-.hs-page.tacky .hs-h1{animation:hsblink 1s steps(1) infinite}
-.hs-marquee{overflow:hidden;white-space:nowrap;background:#000;color:#0f0;border:1px solid #0f0;margin:4px 0}
-.hs-marquee span{display:inline-block;padding-left:100%;animation:hsmarq 12s linear infinite}
-.hs-uc{margin:6px auto;width:max-content;max-width:100%;padding:3px;background:repeating-linear-gradient(45deg,#000 0 8px,#fc0 8px 16px)}
-.hs-uc span{display:block;background:#fc0;color:#000;font-weight:700;padding:2px 10px;font-family:inherit}
-.hs-row{display:flex;justify-content:center;align-items:center;gap:12px;margin:4px 0}
-.hs-gif{display:inline-block;animation:hsspin 1.6s steps(8) infinite}
-.hs-guest{color:#f6f;text-decoration:underline;font-weight:700}
-.hs-flames{height:12px;margin:6px 0;background:repeating-linear-gradient(90deg,#f30 0 6px,#fc0 6px 9px,#f60 9px 14px);animation:hsflame .4s steps(2) infinite;clip-path:polygon(0 100%,5% 20%,10% 100%,15% 0,20% 100%,25% 30%,30% 100%,35% 10%,40% 100%,45% 25%,50% 100%,55% 0,60% 100%,65% 30%,70% 100%,75% 5%,80% 100%,85% 25%,90% 100%,95% 10%,100% 100%)}
-.hs-midi{display:inline-block;background:#c0c0c0;color:#000;font-family:inherit;font-size:.85em;padding:1px 6px;box-shadow:inset -1px -1px #000,inset 1px 1px #fff;margin:3px 0}
-.hs-badge{margin:4px auto;width:max-content;max-width:100%;border:2px outset #ccc;background:#008;color:#fff;font-size:.8em;padding:2px 6px}
-.hs-ring{margin:4px 0;font-size:.85em}.hs-ring a{color:#0ff;text-decoration:underline}.hs-ring b{color:#fff}
-.hs-counter{margin-top:6px;color:#fff;font-size:.9em}
 .odo{display:inline-flex;gap:1px;vertical-align:middle}.odo i{font-style:normal;font-family:monospace;background:#000;color:#fff;padding:0 3px;border:1px solid #666}
-.hs-page[data-counter="1"] .odo i{background:linear-gradient(#333,#000 50%,#222);color:#fc0}
-.hs-page[data-counter="2"] .odo i{background:#100;color:#f22;text-shadow:0 0 4px #f00}
-.hs-page[data-counter="3"] .odo i{background:#010;color:#3f3;text-shadow:0 0 5px #0f0;animation:hsblink 1.2s steps(1) infinite}
-.hs-shop{margin-top:6px}.hs-vis{font-weight:700;margin-bottom:4px}
-.hs-btns{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px}
-.hs-btns button{display:grid;grid-template-columns:1fr auto;text-align:left;padding:3px 6px}
-.hs-btns button .sp{font-weight:700;padding-left:6px}.hs-btns button .sx{grid-column:1/3;font-style:normal;font-size:.85em;color:#205020}
-.hs-btns button:disabled{color:#3a3a3a;text-shadow:none}.hs-btns button:disabled .sx{color:#444}.hs-btns button.owned .sp{color:#106010}
-@keyframes hsmarq{to{transform:translateX(-100%)}}@keyframes hsspin{to{transform:rotate(360deg)}}@keyframes hsflame{50%{filter:hue-rotate(25deg) brightness(1.2)}}@keyframes hsblink{50%{opacity:.35}}
-body.calm .hs-page *{animation:none!important}body.calm .hs-marquee span{padding-left:0}
+.df-btns{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px}
+.df-btns button{display:grid;grid-template-columns:1fr auto;text-align:left;padding:3px 6px}
+.df-btns button .sp{font-weight:700;padding-left:6px}.df-btns button .sx{grid-column:1/3;font-style:normal;font-size:.85em;color:#205020}
+.df-btns button:disabled{color:#3a3a3a;text-shadow:none}.df-btns button:disabled .sx{color:#444}.df-btns button.owned .sp{color:#106010}
 /* v0.7 spare-parts sticks (Upgrade PC): vertical green DIMMs, unlike MotherBored's horizontal slots */
 .spare{margin:4px 0}.spare-n{font-weight:700;font-size:1.15em;margin-bottom:3px}
 .spare-row{display:flex;flex-wrap:wrap;gap:3px;align-items:flex-end;min-height:40px;margin-bottom:3px}
@@ -404,12 +379,10 @@ body.calm .hs-page *{animation:none!important}body.calm .hs-marquee span{padding
 .spare-stick.cur b{position:absolute;left:0;right:0;bottom:0;background:#2c9a3c}
 .spare-stick.next{opacity:.35}.spare-more{font-size:.85em;align-self:center;margin-right:3px}
 /* v0.8.3: fluid shop grids: 2 columns when there is room, 1 when narrow; labels truncate, descriptions wrap; nothing forces width */
-.hs-btns{grid-template-columns:repeat(auto-fit,minmax(max(min(100%,260px),calc(50% - 2px)),1fr))}.window fieldset{min-width:0;min-inline-size:0}.hs-btns button{min-width:0;overflow:hidden}.hs-btns button b{white-space:normal;overflow-wrap:anywhere;min-width:0}.hs-btns button .sp{white-space:nowrap}.hs-btns button .sx{white-space:normal;overflow-wrap:anywhere}
-body.pocket .hs-btns{grid-template-columns:1fr}
+.df-btns{grid-template-columns:repeat(auto-fit,minmax(max(min(100%,260px),calc(50% - 2px)),1fr))}.window fieldset{min-width:0;min-inline-size:0}.df-btns button{min-width:0;overflow:hidden}.df-btns button b{white-space:normal;overflow-wrap:anywhere;min-width:0}.df-btns button .sp{white-space:nowrap}.df-btns button .sx{white-space:normal;overflow-wrap:anywhere}
+body.pocket .df-btns{grid-template-columns:1fr}
 /* v0.7.1: spare-stick bar text sits under the bar, full contrast */
 .spare-kb{font-weight:700;text-align:right;margin-top:-2px}
-.hs-mirror{font-weight:700;color:#006000;margin-bottom:4px}
-.hs-x{color:#ff0;font-style:normal;font-size:.85em}.hs-mirrors{margin:4px 0;font-size:.85em;color:#fff}.hs-mirrors a{color:#7f7;text-decoration:underline;margin:0 2px}.hs-mirrors i{color:#ff0}
 /* v0.10.17 (Ray): greyed install buttons look exactly like a greyed Dialer upgrade button (98.css button:disabled: #808080 text, white emboss, full opacity) */
 .pbtns button:disabled,.pbtns button.nofit:disabled{color:#808080!important;text-shadow:1px 1px 0 #fff;opacity:1}
 /* v0.8.2: program windows share one height: description always takes two lines, so 'All slots full' and short descriptions keep the layout */
@@ -432,10 +405,9 @@ body.calm .dlbtn .stars,body.calm .dlbtn.auto{animation:none}
 #deskicons .desk-icon.sel span{background:#000080;color:#fff;outline:1px dotted #fff}
 #deskicons .desk-icon.sel svg,#deskicons .desk-icon.sel img,#deskicons .desk-icon.sel canvas{filter:sepia(1) hue-rotate(190deg) saturate(4) brightness(.7)}
 /* v0.8.3: shop buttons flow: name first, price right (drops below the name when narrow), description full width */
-.hs-btns button{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:6px}
-.hs-btns button b{flex:1 1 auto}.hs-btns button .sp{margin-left:auto;padding-left:0}.hs-btns button .sx{flex:1 0 100%}
+.df-btns button{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:6px}
+.df-btns button b{flex:1 1 auto}.df-btns button .sp{margin-left:auto;padding-left:0}.df-btns button .sx{flex:1 0 100%}
 /* v0.8.4: visitors = the perks currency, shown as a balance line at the top of RAM perks */
-.hs-perkset .hs-vis{margin:0 0 5px;padding:3px 6px;background:#fff;border:1px solid;border-color:#808080 #fff #fff #808080;font-weight:700}
 body.pocket .window.gridh{height:auto}
 #w-dialer.gridh>.window-body{margin:4px 6px;padding-top:0;padding-bottom:0}#w-dialer.gridh .conn-next{margin:2px 0}
 
@@ -471,9 +443,6 @@ body.pocket #odo .lc-num{font-size:calc(19px*var(--ts,1))}
 
 /* v0.9.6: the HomeSteadz visitor hit counter is always one horizontal row of fixed-width digit cells (it shares the .odo name with nothing any more: the Download-O-Meter is #odo).
    The label and the counter wrap onto two centred lines when the window is very narrow; they never overlap the banner or each other. */
-.hs-counter{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;column-gap:6px;row-gap:3px;position:relative;clear:both}
-.hs-counter .odo{position:static;transform:none;display:inline-flex;flex-direction:row;flex-wrap:nowrap;flex:none;width:auto;white-space:nowrap;margin:0;padding:0;border:0;background:none;gap:1px;vertical-align:middle}
-.hs-counter .odo i{display:block;flex:none;box-sizing:border-box;width:1.45em;padding:0;text-align:center;line-height:1.35;white-space:nowrap}
 /* v0.10.0: readme.txt notes, unread mark, finale dialog */
 .desk-icon.unread::after{content:attr(data-n);position:absolute;top:-2px;right:6px;min-width:1em;text-align:center;background:#d02020;color:#fff;font-size:max(calc(11px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));padding:0 3px}
 .notepad .rd-h{margin:8px 0 4px;font-weight:bold}.notepad .rd-note{margin:0 0 6px;padding:2px 0 2px 4px;border-left:2px solid #808080}.notepad .rd-note.new{border-left-color:#d02020}
@@ -509,3 +478,21 @@ body.pocket #w-browser .offers{min-height:0}
 .hud .rate.frenzy{color:#b08000;font-weight:bold}
 .fill.frozen{background:repeating-linear-gradient(45deg,#808080 0 6px,#a0a0a0 6px 12px)!important}
 .float.inwin{position:absolute;z-index:50}
+/* v0.11.0 Disk Defragulator: a classic defrag block map, all CSS */
+.df-top{display:flex;justify-content:space-between;gap:8px;font-weight:700;margin-bottom:3px}
+.df-map{display:grid;grid-template-columns:repeat(var(--cols,16),minmax(8px,var(--cell,22px)));justify-content:center;gap:2px;padding:4px;background:#fff;box-shadow:inset 1px 1px #808080,inset -1px -1px #dfdfdf;user-select:none}
+.df-map i{display:block;aspect-ratio:1;min-width:8px;background:#fff;border:1px solid #c0c0c0;box-sizing:border-box;cursor:pointer;font-style:normal}
+.df-map i.f{border-color:rgba(0,0,0,.45)}
+.df-map i.ok{box-shadow:inset 0 0 0 1px rgba(255,255,255,.55)}
+.df-map i.bad{background:#c00;border-color:#600;cursor:not-allowed;background-image:linear-gradient(45deg,transparent 42%,#fff 42% 58%,transparent 58%),linear-gradient(-45deg,transparent 42%,#fff 42% 58%,transparent 58%)}
+.df-map i.sel{outline:2px dashed #000;outline-offset:-1px}
+body:not(.calm) .df-map i.rd{background:#e00!important}
+body:not(.calm) .df-map i.wr{background:#0c0!important}
+.df-map.paused{opacity:.6}
+.df-legend{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.85em;margin:3px 0}
+.df-legend span::before{content:'';display:inline-block;width:9px;height:9px;margin-right:3px;border:1px solid #808080;vertical-align:-1px;background:var(--c)}
+.df-speed{font-weight:700;color:#006000;margin:3px 0}
+.df-stat{font-size:.9em;margin-bottom:3px}
+.df-stat.paused{color:#a00;font-weight:700}
+.df-bar{height:10px;background:#fff;box-shadow:inset 1px 1px #808080;margin:2px 0 4px}.df-bar b{display:block;height:100%;background:#000080}
+.df-btns{gap:4px}
