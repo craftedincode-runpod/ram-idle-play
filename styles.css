@@ -496,3 +496,13 @@ body:not(.calm) .df-map i.wr{background:#0c0!important}
 .df-stat.paused{color:#a00;font-weight:700}
 .df-bar{height:10px;background:#fff;box-shadow:inset 1px 1px #808080;margin:2px 0 4px}.df-bar b{display:block;height:100%;background:#000080}
 .df-btns{gap:4px}
+
+
+/* v0.11.2: Defrag solve-bonus UI + MVP badge */
+.df-tools{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0}
+.df-tools button{min-width:110px}
+.df-flash{font-weight:700;color:#006000;background:#e8ffe8;border:1px solid #080;padding:3px 6px;margin:3px 0}
+.tray-mvp{height:20px!important;padding:0 6px!important;font-size:11px!important;font-weight:700;color:#000080;background:#ffffa8;cursor:pointer}
+.tray-mvp[hidden]{display:none!important}
+#desk .mvp-badge{outline:2px solid #080;outline-offset:1px;background:rgba(0,128,0,.12)}
+#desk .mvp-badge .label{font-weight:700;color:#006000}
