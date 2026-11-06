@@ -480,17 +480,22 @@ body.pocket #w-browser .offers{min-height:0}
 .float.inwin{position:absolute;z-index:50}
 /* v0.11.0 Disk Defragulator: a classic defrag block map, all CSS */
 .df-top{display:flex;justify-content:space-between;gap:8px;font-weight:700;margin-bottom:3px}
-.df-map{display:grid;grid-template-columns:repeat(var(--cols,16),minmax(8px,var(--cell,22px)));justify-content:center;gap:2px;padding:4px;background:#fff;box-shadow:inset 1px 1px #808080,inset -1px -1px #dfdfdf;user-select:none}
+.df-map{display:grid;grid-template-columns:repeat(var(--cols,16),var(--cell,22px));grid-auto-rows:var(--cell,22px);justify-content:center;align-content:center;gap:2px;padding:4px;background:#fff;box-shadow:inset 1px 1px #808080,inset -1px -1px #dfdfdf;user-select:none}
+/* v0.11.3: a player-resized Defragulator gives the leftover box to the map, and the cells grow to fill it (the window itself still stops at the taskbar) */
+#w-defrag.sized>.window-body{overflow:hidden}
+#w-defrag.sized>.window-body>#df-map{flex:1 1 auto;min-height:0;overflow:auto}
 .df-map i{display:block;aspect-ratio:1;min-width:8px;background:#fff;border:1px solid #c0c0c0;box-sizing:border-box;cursor:pointer;font-style:normal}
 .df-map i.f{border-color:rgba(0,0,0,.45)}
 .df-map i.ok{box-shadow:inset 0 0 0 1px rgba(255,255,255,.55)}
-.df-map i.bad{background:#c00;border-color:#600;cursor:not-allowed;background-image:linear-gradient(45deg,transparent 42%,#fff 42% 58%,transparent 58%),linear-gradient(-45deg,transparent 42%,#fff 42% 58%,transparent 58%)}
+.df-map i.bad{cursor:not-allowed}
+.df-map i.bad,.df-legend span.bad::before{background-color:#c00;border-color:#600;background-image:linear-gradient(45deg,transparent 42%,#fff 42% 58%,transparent 58%),linear-gradient(-45deg,transparent 42%,#fff 42% 58%,transparent 58%)}
 .df-map i.sel{outline:2px dashed #000;outline-offset:-1px}
 body:not(.calm) .df-map i.rd{background:#e00!important}
 body:not(.calm) .df-map i.wr{background:#0c0!important}
 .df-map.paused{opacity:.6}
 .df-legend{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:.85em;margin:3px 0}
 .df-legend span::before{content:'';display:inline-block;width:9px;height:9px;margin-right:3px;border:1px solid #808080;vertical-align:-1px;background:var(--c)}
+.df-legend span.rd::before{background:#e00}
 .df-speed{font-weight:700;color:#006000;margin:3px 0}
 .df-stat{font-size:.9em;margin-bottom:3px}
 .df-stat.paused{color:#a00;font-weight:700}
@@ -502,7 +507,21 @@ body:not(.calm) .df-map i.wr{background:#0c0!important}
 .df-tools{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0}
 .df-tools button{min-width:110px}
 .df-flash{font-weight:700;color:#006000;background:#e8ffe8;border:1px solid #080;padding:3px 6px;margin:3px 0}
+.df-flash.warn{color:#804000;background:#fff8e0;border-color:#a80}
 .tray-mvp{height:20px!important;padding:0 6px!important;font-size:11px!important;font-weight:700;color:#000080;background:#ffffa8;cursor:pointer}
 .tray-mvp[hidden]{display:none!important}
 #desk .mvp-badge{outline:2px solid #080;outline-offset:1px;background:rgba(0,128,0,.12)}
 #desk .mvp-badge .label{font-weight:700;color:#006000}
+
+/* v0.12.0 Achievements window. Locked = a ? tile. Unlocked = the pixel icon, title, flavor, reward. */
+.ach-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;padding-bottom:4px;border-bottom:2px groove #fff}
+.ach-head b{color:#000080}
+.ach-sub{color:#444;font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));text-align:right}
+.ach-row{display:flex;gap:6px;align-items:flex-start;padding:2px 2px;border-bottom:1px dotted #c0c0c0}
+.ach-ic{width:16px;height:16px;flex:none;display:flex;align-items:center;justify-content:center;background:#000;color:#3d3;font-weight:700;font-size:14px;line-height:1}
+.ach-row.off .ach-ic{background:#1a1a1a;color:#888}
+.ach-tx{min-width:0}
+.ach-tx b{display:block}
+.ach-fl,.ach-hint,.ach-meta{color:#333;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
+.ach-rew{color:#006000;font-weight:700;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
+.ach-row.on .ach-ic img{image-rendering:pixelated}
