@@ -383,7 +383,7 @@ body.era2.tb-left #gomenu{left:170px;top:0;bottom:auto}body.era2.tb-right #gomen
 body.pocket .df-btns{grid-template-columns:1fr}
 /* v0.7.1: spare-stick bar text sits under the bar, full contrast */
 .spare-kb{font-weight:700;text-align:right;margin-top:-2px}
-/* v0.10.17 (Ray): greyed install buttons look exactly like a greyed Dialer upgrade button (98.css button:disabled: #808080 text, white emboss, full opacity) */
+/* v0.10.17 (Ray): greyed install buttons stay grey text, white emboss, full opacity (the old Dialer button look) */
 .pbtns button:disabled,.pbtns button.nofit:disabled{color:#808080!important;text-shadow:1px 1px 0 #fff;opacity:1}
 /* v0.8.2: program windows share one height: description always takes two lines, so 'All slots full' and short descriptions keep the layout */
 .prog .desc{min-height:2.5em;max-height:2.5em;line-height:1.25em;overflow:hidden}
@@ -513,15 +513,14 @@ body:not(.calm) .df-map i.wr{background:#0c0!important}
 #desk .mvp-badge{outline:2px solid #080;outline-offset:1px;background:rgba(0,128,0,.12)}
 #desk .mvp-badge .label{font-weight:700;color:#006000}
 
-/* v0.12.0 Achievements window. Locked = a ? tile. Unlocked = the pixel icon, title, flavor, reward. */
-.ach-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;padding-bottom:4px;border-bottom:2px groove #fff}
-.ach-head b{color:#000080}
-.ach-sub{color:#444;font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));text-align:right}
-.ach-row{display:flex;gap:6px;align-items:flex-start;padding:2px 2px;border-bottom:1px dotted #c0c0c0}
-.ach-ic{width:16px;height:16px;flex:none;display:flex;align-items:center;justify-content:center;background:#000;color:#3d3;font-weight:700;font-size:14px;line-height:1}
-.ach-row.off .ach-ic{background:#1a1a1a;color:#888}
-.ach-tx{min-width:0}
-.ach-tx b{display:block}
-.ach-fl,.ach-hint,.ach-meta{color:#333;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
-.ach-rew{color:#006000;font-weight:700;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)))}
-.ach-row.on .ach-ic img{image-rendering:pixelated}
+/* v0.12.4 Achievements window: icon grid only. Locked = ?. The description is #ach-tip; a click opens a normal dialog. */
+.ach-grid{display:grid;grid-template-columns:repeat(var(--ach-cols, 8), 36px);gap:4px;width:max-content}
+.ach-cell{width:36px;height:36px;min-width:36px;min-height:36px;padding:0;display:flex;align-items:center;justify-content:center;background:#000;color:#3d3;font-weight:700;font-size:18px;line-height:1;cursor:pointer}
+.ach-cell.off{background:#1a1a1a;color:#888}
+.ach-cell img{image-rendering:pixelated;width:16px;height:16px}
+#ach-tip{position:fixed;z-index:95000;max-width:280px;background:#ffffe1;color:#000;border:1px solid #000;padding:4px 6px;font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));line-height:1.3;pointer-events:none;white-space:pre-line;box-shadow:2px 2px 0 #808080}
+#ach-tip[hidden]{display:none}
+.ach-dlg p{margin:0 0 4px}
+.ach-dlg-name{font-weight:700}
+.ach-dlg-rew{color:#006000;font-weight:700}
+.ach-dlg-state{font-weight:700;color:#000080}
