@@ -18,7 +18,9 @@ button:disabled{color:#808080}
 .blink{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:.25}}
 /* desktop icons */
 .desk-icon{all:unset;width:78px;display:flex;flex-direction:column;align-items:center;text-align:center;font-size:max(calc(14px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));line-height:1.05;cursor:default;padding:2px 0;position:relative}
-.desk-icon span{margin-top:3px;padding:0 2px}
+.desk-icon span{display:block;width:100%;box-sizing:border-box;margin-top:3px;padding:0 2px;white-space:normal;overflow-wrap:anywhere;line-height:1.15}
+.pile .desk-icon,#deskicons .desk-icon,#iconrow .desk-icon{width:108px;min-height:78px;box-sizing:border-box;overflow:hidden}
+.pile .desk-icon{color:#000;text-shadow:none}
 .desk-icon:focus span{background:#000080;color:#fff;outline:1px dotted #fff}
 .desk-icon.new::after{content:'NEW';position:absolute;top:-2px;right:6px;background:#d02020;color:#fff;font-size:max(calc(11px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));padding:0 3px;animation:blink 1s steps(1) infinite}
 #deskicons{position:absolute;left:4px;top:6px;display:flex;flex-direction:column;flex-wrap:wrap;gap:8px;max-height:calc(100% - 12px)}
@@ -149,7 +151,7 @@ body.era1 .page,body.era1 .addr .field,body.era1 .dlbar,body.era1 .sunken-panel{
 body.era1 .status-bar-field{box-shadow:none;border:1px solid #808080}
 body.era1 .pile{display:flex;flex-wrap:wrap;gap:4px;padding:4px;background:#fff;min-height:200px;max-height:calc(100vh - 80px);overflow:auto;align-content:flex-start}
 body.era1 .desk-icon,body.era1 .desk-icon:active{background:none!important;border:0!important;box-shadow:none!important;min-height:0}
-body.era1 .pile .desk-icon{color:#000}
+body.era1 .pile .desk-icon,body.era1 #iconrow .desk-icon{color:#000;min-height:78px}
 body.era1 .dlbar .fill{background:#2d3e9a}
 body.era1 .popup.window{box-shadow:0 0 0 1px #000,inset 0 0 0 3px #e040c0,inset 0 0 0 4px #000}
 body.era1 .popup .title-bar{color:#fff}
@@ -244,7 +246,6 @@ body.crt .window-body .big,body.crt .float{text-shadow:0 0 calc(5px*var(--crt)) 
 .float.pay{color:#106010;font-weight:700;text-shadow:1px 1px 0 #fff}
 .float.pay.auto{color:#000080}
 .pbar .fill.flash{background:#5ed15e!important}
-.window .pay.small{font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));color:#555;margin-top:2px}
 .dlbtn.auto{animation:autoclick .18s steps(2)}@keyframes autoclick{50%{filter:brightness(1.25);transform:translateY(1px)}}
 .hud .hud-total{font-size:max(calc(13px*var(--ts,1)),calc(var(--minfs,0px)*var(--ts,1)));color:#333}
 #pk-sub{font-size:max(calc(12px*var(--ts,1)),calc(var(--minfs,0px)*.85*var(--ts,1)));color:#eef;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -388,7 +389,7 @@ body.pocket .df-btns{grid-template-columns:1fr}
 /* v0.8.2: program windows share one height: description always takes two lines, so 'All slots full' and short descriptions keep the layout */
 .prog .desc{min-height:2.5em;max-height:2.5em;line-height:1.25em;overflow:hidden}
 /* v0.8.2: uniform program windows - optional lines always reserve exactly one line; long labels wrap instead of widening */
-.prog .pay,.prog .extra{min-height:1.25em;max-height:1.25em;line-height:1.25em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prog .extra{min-height:1.25em;max-height:1.25em;line-height:1.25em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .prog .pstats{min-height:2.5em}
 .prog .tier{white-space:normal;max-width:100%}
 /* v0.8.2: the big banner button - twice as tall, bigger type, 90s bevel */
@@ -513,8 +514,11 @@ body:not(.calm) .df-map i.wr{background:#0c0!important}
 #desk .mvp-badge{outline:2px solid #080;outline-offset:1px;background:rgba(0,128,0,.12)}
 #desk .mvp-badge .label{font-weight:700;color:#006000}
 
-/* v0.12.4 Achievements window: icon grid only. Locked = ?. The description is #ach-tip; a click opens a normal dialog. */
-.ach-grid{display:grid;grid-template-columns:repeat(var(--ach-cols, 8), 36px);gap:4px;width:max-content}
+/* v0.13.1 Achievements: the grid fills the window and reflows. Scroll only when the icons cannot fit. */
+.ach{flex:1 1 auto;min-width:0;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;height:100%}
+.ach-grid{display:grid;grid-template-columns:repeat(var(--ach-cols, 6), 36px);gap:var(--ach-gap, 4px);width:max-content;height:max-content;align-content:start;justify-content:center}
+#w-ach>.window-body>.ach{flex:1 1 auto;min-height:0;min-width:0}
+#w-ach.ach-fit>.window-body{overflow:hidden}
 .ach-cell{width:36px;height:36px;min-width:36px;min-height:36px;padding:0;display:flex;align-items:center;justify-content:center;background:#000;color:#3d3;font-weight:700;font-size:18px;line-height:1;cursor:pointer}
 .ach-cell.off{background:#1a1a1a;color:#888}
 .ach-cell img{image-rendering:pixelated;width:16px;height:16px}
